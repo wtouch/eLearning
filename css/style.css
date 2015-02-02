@@ -7,7 +7,7 @@ header{
 	top:0;
 	left: 0;
 	right:0;
-	height: 50px;
+	height: 80px;
 	background:#ccc;
 }
 footer{
@@ -20,7 +20,7 @@ footer{
 }
 main{
 	height:100%;
-	padding-top: 50px;
+	padding-top: 80px;
 	padding-bottom: 50px;
 }
 main h1{
@@ -29,4 +29,13 @@ main h1{
 	background: red;
 	color: white;
 	margin: auto;
+}
+.dformat
+{
+	padding-top:30px;
+}
+
+a:hover
+{
+	text-decoration:none;
 }
