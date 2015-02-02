@@ -30,6 +30,7 @@ main h1{
 	color: white;
 	margin: auto;
 }
+<<<<<<< HEAD
 .dformat
 {
 	padding-top:30px;
@@ -39,6 +40,7 @@ a:hover
 {
 	text-decoration:none;
 }
+=======
 
 .dashboard
 {
@@ -53,3 +55,4 @@ a:hover
 	height:150px;
 	width:150px;
  }
+>>>>>>> "style.css" changed
