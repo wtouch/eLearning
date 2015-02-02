@@ -29,23 +29,60 @@
 				  </div>
 				  <div class="modal-body">
 					<div class="row">
-							<div class="col-md-4">
-								<div class="dashboard">
-								<img src="img/e.jpg">
-								</div>
+						<div class="col-md-3">
+							<h5>Index</h5>
+							<div class="dropdown">
+								  <a id="dLabel" data-target="#" href="partials/assignment.html" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+									Assignments
+									<span class="caret"></span>
+								  </a>
+
+								  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+									<li><a href="#">Assignment 1</a></li>
+									<li><a href="#">Assignment 2</a></li>
+									<li><a href="#">Assignment 3</a></li>
+									<li><a href="#">Assignment 4</a></li>
+									<li><a href="#">Assignment 5</a></li>
+									<li><a href="#">Assignment 6</a></li>
+									
+								  </ul>
 							</div>
-							<div class="col-md-4">
-								<div class="dashboard">
-								<img src="img/e2.jpg">
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="dashboard">
-								<img src="img/e3.jpg">
-								</div>
-							</div>
-							
-					</div>
+						</div>
+						<div class="col-md-9">
+								<table class="table table-bordered">
+									<thead> Assignment Details</thead>
+									<tbody>
+										<tr>
+											<th>Sr No.</th>
+											<th>Assign Name</th>
+											<th>Status</th>
+											<th>Score</th>
+											<th>Waitage</th>
+											<th>Model Assign</th>
+										</tr>
+										
+										<tr>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+										<tr>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</tbody>
+  
+								</table>
+								
+						</div>
+						</div>
 				  </div>
 				  <div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -88,4 +125,5 @@ $('#exampleModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('New message to ' + recipient)
   //modal.find('.modal-body input').val(recipient)
 })
+$('.dropdown-toggle').dropdown();
 </script>
