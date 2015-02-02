@@ -31,7 +31,11 @@ main h1{
 	color: white;
 	margin: auto;
 }
-.dformat
+.f1
+{
+ width:700px;
+ 
+}.dformat
 {
 	padding-top:30px;
 }
