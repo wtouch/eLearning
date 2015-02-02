@@ -3,7 +3,7 @@ html, body{
 }
 
 header{
-	position: fixed;
+	
 	top:0;
 	left: 0;
 	right:0;
@@ -11,7 +11,7 @@ header{
 	background:#ccc;
 }
 footer{
-	position: fixed;
+	
 	bottom:0;
 	left: 0;
 	right:0;

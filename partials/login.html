@@ -1,7 +1,7 @@
 <section>
 <div class="row">
 	<div class="col-md-12">
-		<img src="img/e2.jpg" class="center-block"/>
+		<img src="img/e5.jpg" class="center-block"/>
 	</div>
 </div>
 <div class="row">
@@ -14,9 +14,9 @@
 			<form class="form-horizontal f1 center-block"  role="form" name="myForm"  novalidate="novalidate">
 			<h3>Login</h3>
 			<div class="form-group">
-							<label for="u_email" class="col-md-2 control-label">Email/UserName</label>
+							<label for="uemail" class="col-md-2 control-label">Email/UserName</label>
 						<div class="col-md-4">
-                            <input type="Email" class="form-control" id="u_email" name="u_email" placeholder="Enter Email" required>
+                            <input type="Email" class="form-control" id="uemail" name="u_email"ng-model="u_name" placeholder="Enter Email" required>
 							<span style="color:red" ng-show="myForm.u_email.$dirty && myForm.u_email.$invalid">
 							<span ng-show="myForm.u_email.$error.required">Email is required.</span>
 							<span ng-show="myForm.u_email.$error.email">Invalid Email address.</span>
@@ -28,7 +28,7 @@
 			<div class="form-group">
 						<label for="pwd" class="col-md-2 control-label">Password </label>
 						<div class="col-md-4">
-                            <input type="Password" class="form-control" id="pwd" name="pwd" placeholder="Enter Password " required>
+                            <input type="Password" class="form-control" id="pwd" name="pwd" ng-model="pwd" placeholder="Enter Password " required>
 							<span style="color:red" ng-show="myForm.pwd.$dirty && myForm.pwd.$invalid">
 							<span ng-show="myForm.pwd.$error.required">Password is required.</span>
 							</span>
@@ -53,7 +53,7 @@
 				<button type="submit" class="btn btn-info" name="btn1" ng-model="login.btn1" 
 				ng-click="insert()">Register</button>
 				<br>
-				<a href="#register">Register here</a> | <a href="#forgot">Forgot Password</a>
+				<!--<a href="#register">Register here</a> | <a href="#forgot">ForgotPassword</a>-->
 				</div>
 			</div>
 			</form>
