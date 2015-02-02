@@ -41,6 +41,10 @@ a:hover
 	text-decoration:none;
 }
 
+img
+{
+	border-radius:10px;
+}
 .dashboard
 {
 	padding:10px;
