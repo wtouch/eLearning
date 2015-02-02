@@ -1,0 +1,42 @@
+<section>
+<div class="row">
+	<div class="col-md-12">
+		<img src="img/footer-icon.png" class="center-block"/>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<img src="img/sld.jpg">
+	</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<form class="center-block" role="form" name="myForm" novalidate="novalidate">
+<h3>LOGIN</h3>
+  <div class="form-group">
+    <label for="ex">Email address</label>
+    <input type="email" class="form-control" id="ex" name="u_email"placeholder="Enter email">
+	<span style="color:red" ng-show="myForm.u_email.$dirty && myForm.u_email.$invalid">
+	<span ng-show="myForm.u_email.$error.required">Email is required.</span>
+	<span ng-show="myForm.u_email.$error.email">Invalid Email address.</span>
+	</span>
+  </div>
+  <div class="form-group">
+    <label for="pswd">Password</label>
+    <input type="password" class="form-control" name="pass" id="pswd" placeholder="Password">
+	<span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+	<span ng-show="myForm.pass.$error.required">Password is required.</span>
+	</span>
+  </div>
+  
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+
+</form>
+</div>
+</div>
+</section>

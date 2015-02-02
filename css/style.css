@@ -1,0 +1,32 @@
+html, body{
+	height: 100%;
+}
+
+header{
+	position: fixed;
+	top:0;
+	left: 0;
+	right:0;
+	height: 50px;
+	background:#ccc;
+}
+footer{
+	position: fixed;
+	bottom:0;
+	left: 0;
+	right:0;
+	height: 50px;
+	background:#ccc;
+}
+main{
+	height:100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+main h1{
+	height: 150px;
+	width: 150px;
+	background: red;
+	color: white;
+	margin: auto;
+}
