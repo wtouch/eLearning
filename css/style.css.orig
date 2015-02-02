@@ -3,7 +3,7 @@ html, body{
 }
 
 header{
-	position: fixed;
+	
 	top:0;
 	left: 0;
 	right:0;
@@ -11,7 +11,7 @@ header{
 	background:#ccc;
 }
 footer{
-	position: fixed;
+	
 	bottom:0;
 	left: 0;
 	right:0;
@@ -22,6 +22,7 @@ main{
 	height:100%;
 	padding-top: 80px;
 	padding-bottom: 50px;
+	
 }
 main h1{
 	height: 150px;
@@ -30,8 +31,11 @@ main h1{
 	color: white;
 	margin: auto;
 }
-<<<<<<< HEAD
-.dformat
+.f1
+{
+ width:700px;
+ 
+}.dformat
 {
 	padding-top:30px;
 }
@@ -40,8 +44,11 @@ a:hover
 {
 	text-decoration:none;
 }
-=======
 
+img
+{
+	border-radius:10px;
+}
 .dashboard
 {
 	padding:10px;
@@ -55,4 +62,16 @@ a:hover
 	height:150px;
 	width:150px;
  }
->>>>>>> "style.css" changed
+<<<<<<< HEAD
+.progress
+{
+	margin-top:10px;
+	left:20px;
+}	
+=======
+.dimg
+{   
+	height:150px;
+	width:150px;
+}
+>>>>>>> elib.html created
