@@ -133,7 +133,7 @@ a.btn.btn-link::before
 
 a.btn.btn-link:hover
 {
-	font-weight:bold;
+	
 	color:white;
 	text-decoration:none;
 	background-color:#0088cc;
