@@ -45,23 +45,15 @@ a:hover
 	text-decoration:none;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> courses updated
-.dashboard
+.gridblock
 {
 	padding:10px;
 	margin-bottom:20px;
 	border:1px solid gray;
 	border-radius:10px 10px 10px 10px;
-<<<<<<< HEAD
-	box-shadow:4px 4px 4px gray;
-	background-color:#C0C0C0;
-=======
 	box-shadow:4px 4px 4px rgb(229, 222, 222);
 	
->>>>>>> courses updated
 }
 .dashboard img
 {
@@ -71,7 +63,8 @@ a:hover
  }
 .timer
 {
-	font-size:30px;
+	font-size:20px;
+	
 }
 
 .caption-2::after {
@@ -98,10 +91,7 @@ display: inline-block;
 position: relative;
 
 }
-a {
-color: #888;
-text-decoration: none;
-}
+
 .caption-2:hover::before, .caption-2:hover::after {
 opacity: 1;
 }
@@ -129,18 +119,24 @@ a.btn.btn-link.collapsed::before
 {
     content: "+";
 }
-
+.im1
+{
+	height:150px;
+	width:150px;
+	
+}
 a.btn.btn-link::before
 {
 
     content: "-";
 }
+
 a.btn.btn-link:hover
 {
 	font-weight:bold;
 	color:white;
 	text-decoration:none;
-	background-color:#328bca;
+	background-color:#0088cc;
 	border-radius:5px;
 
 }
@@ -148,17 +144,25 @@ a.btn.btn-link:hover
 {
 	background-color:#F7F5DC;
 	border-radius:25px;
+
 }
 ul
 {
 	list-style:none;
 }
 <<<<<<< HEAD
-.asideb
+/*.asideb
 {
+   
 	border:1px solid black;
-}
+}*/
 =======
+.asideb {
+border: 1px solid black;
+padding: 15px;
+margin: 15px 0;
+}
+>>>>>>> style updated
 video
 {
 	width:100%; 
@@ -172,4 +176,3 @@ video
 {
 	background:none;
 }*/
->>>>>>> courses updated
