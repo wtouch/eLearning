@@ -20,7 +20,7 @@ footer{
 }
 main{
 	height:100%;
-	padding-top: 80px;
+	/*padding-top: 80px;*/
 	padding-bottom: 50px;
 	
 }
@@ -33,11 +33,11 @@ main h1{
 }
 .f1
 {
- width:700px;
+ width:500px;
  
 }.dformat
 {
-	padding-top:30px;
+	padding-top:20px;
 }
 
 a:hover
@@ -45,33 +45,131 @@ a:hover
 	text-decoration:none;
 }
 
-img
-{
-	border-radius:10px;
-}
+<<<<<<< HEAD
+=======
+
+>>>>>>> courses updated
 .dashboard
 {
 	padding:10px;
 	margin-bottom:20px;
-	border:2px solid gray;
+	border:1px solid gray;
 	border-radius:10px 10px 10px 10px;
+<<<<<<< HEAD
 	box-shadow:4px 4px 4px gray;
+	background-color:#C0C0C0;
+=======
+	box-shadow:4px 4px 4px rgb(229, 222, 222);
+	
+>>>>>>> courses updated
 }
 .dashboard img
 {
 	height:150px;
 	width:150px;
+	
  }
-<<<<<<< HEAD
-.progress
+.timer
 {
-	margin-top:10px;
-	left:20px;
-}	
-=======
-.dimg
-{   
-	height:150px;
-	width:150px;
+	font-size:30px;
 }
->>>>>>> elib.html created
+
+.caption-2::after {
+content: '\201C' attr(data-description) '\201D';
+top: 0;
+height: 70%;
+background: #7A96EA;
+
+
+font-size: 10px;
+text-align: center;
+}
+.caption-2::before {
+content: attr(data-title);
+top: 70%;
+height: 30%;
+background: #A0B4F0;
+font-size: 18px;
+font-weight: 300;
+text-align: center;
+}
+.caption {
+display: inline-block;
+position: relative;
+
+}
+a {
+color: #888;
+text-decoration: none;
+}
+.caption-2:hover::before, .caption-2:hover::after {
+opacity: 1;
+}
+.caption-2::before {
+opacity: 0;
+position: absolute;
+width: 100%;
+color: #fff;
+padding: 20px;
+-webkit-transition: opacity 0.3s;
+-moz-transition: opacity 0.3s;
+transition: opacity 0.3s;
+}
+.caption-2::before, .caption-2::after {
+opacity: 0;
+position: absolute;
+width: 100%;
+color: #fff;
+padding: 20px;
+-webkit-transition: opacity 0.3s;
+-moz-transition: opacity 0.3s;
+transition: opacity 
+}
+a.btn.btn-link.collapsed::before
+{
+    content: "+";
+}
+
+a.btn.btn-link::before
+{
+
+    content: "-";
+}
+a.btn.btn-link:hover
+{
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+	background-color:#328bca;
+	border-radius:5px;
+
+}
+.collapse
+{
+	background-color:#F7F5DC;
+	border-radius:25px;
+}
+ul
+{
+	list-style:none;
+}
+<<<<<<< HEAD
+.asideb
+{
+	border:1px solid black;
+}
+=======
+video
+{
+	width:100%; 
+	height:100%; 
+}
+/*.divbg
+{
+	background-color:gray;
+}
+.divbg:hover
+{
+	background:none;
+}*/
+>>>>>>> courses updated
