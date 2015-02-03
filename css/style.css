@@ -56,7 +56,7 @@ img
 	border:1px solid gray;
 	border-radius:10px 10px 10px 10px;
 	box-shadow:4px 4px 4px gray;
-	
+	background-color:#C0C0C0;
 }
 .dashboard img
 {
@@ -74,7 +74,9 @@ img
 content: '\201C' attr(data-description) '\201D';
 top: 0;
 height: 70%;
-background: #db2e00;
+background: #7A96EA;
+
+
 font-size: 10px;
 text-align: center;
 }
@@ -82,7 +84,7 @@ text-align: center;
 content: attr(data-title);
 top: 70%;
 height: 30%;
-background: #a21f00;
+background: #A0B4F0;
 font-size: 18px;
 font-weight: 300;
 text-align: center;
