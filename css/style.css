@@ -55,7 +55,7 @@ a:hover
 	box-shadow:4px 4px 4px rgb(229, 222, 222);
 	
 }
-.dashboard img
+.gridblock img
 {
 	height:150px;
 	width:150px;
@@ -137,13 +137,11 @@ a.btn.btn-link:hover
 	color:white;
 	text-decoration:none;
 	background-color:#0088cc;
-	border-radius:5px;
 
 }
 .collapse
 {
 	background-color:#F7F5DC;
-	border-radius:25px;
 
 }
 ul
