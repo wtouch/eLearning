@@ -1,5 +1,61 @@
 <div class="row">
 	<div class="col-md-2 asideb">
+<<<<<<< HEAD
+	<aside>
+	<div>
+    <input type="text" ng-model="search.title" class="form-control glyphicon glyphicon-search-right" placeholder="Search">
+    </div>
+		<h5>India</h5>		
+		<div class="btn-group">
+		<button type="button" class="btn btn-default">Catagory</button>
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+		<li><a href="#">One</a></li>
+		<li><a href="#">Two</a></li>
+		<li><a href="#">Three</a></li>
+		<!--<li class="divider">Four</li>-->
+		<li><a href="#">Four</a></li>
+		</ul>
+		</div>
+		<h5>Maharashtra</h5>
+		<div class="btn-group">
+		<button type="button" class="btn btn-default">Catagory</button>
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="caret"></span>
+		<span class="sr-only">Toggle Dropdown</span>
+		</button>
+		<ul class="dropdown-menu" role="menu">
+		<li><a href="#">One</a></li>
+		<li><a href="#">Two</a></li>
+		<li><a href="#">Three</a></li>
+		<!--<li class="divider">Four</li>-->
+		<li><a href="#">Four</a></li>
+		</ul>
+		</div>
+		<h5>Search Result</h5>
+		<ul  class="list-unstyled">
+			<li><a href="#">Map</a></li>
+			<li><a href="#">Math</a></li>
+			<li><a href="#">Assignments</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">Chemistry</a></li>
+			<li><a href="#">Map</a></li>
+			<li><a href="#">Math</a></li>
+			<li><a href="#">Assignments</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">Chemistry</a></li>
+			<li><a href="#">Map</a></li>
+			<li><a href="#">Math</a></li>
+			<li><a href="#">Assignments</a></li>
+			<li><a href="#">Projects</a></li>
+			<li><a href="#">Chemistry</a></li>
+			
+		</ul>
+	</aside>
+=======
 		
 			<div>
 				<input type="text" ng-model="search.title" class="form-control glyphicon glyphicon-search-right" placeholder="Search">
@@ -31,7 +87,7 @@
 					</ul>
 			</div>
 				<h5>Search Result</h5>
-		<ul  class="list-unstyled">
+				<ul>
 					<li><a href="#">Map</a></li>
 					<li><a href="#">Math</a></li>
 					<li><a href="#">Assignments</a></li>
@@ -50,6 +106,7 @@
 					
 				</ul>
 		
+>>>>>>> courses updated
 	</div>
 	
 	<div class="col-md-10">

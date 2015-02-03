@@ -150,11 +150,11 @@ ul
 {
 	list-style:none;
 }
-.asideb
+/*.asideb
 {
    
 	border:1px solid black;
-}
+}*/
 video
 {
 	width:100%; 
@@ -168,5 +168,3 @@ video
 {
 	background:none;
 }*/
-
-<pseudo:after>
