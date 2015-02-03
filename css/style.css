@@ -20,7 +20,7 @@ footer{
 }
 main{
 	height:100%;
-	padding-top: 80px;
+	/*padding-top: 80px;*/
 	padding-bottom: 50px;
 	
 }
@@ -66,4 +66,26 @@ img
 {   
 	height:150px;
 	width:150px;
+}
+
+a.btn.btn-link.collapsed::before
+{
+    content: "+";
+}
+
+a.btn.btn-link::before
+{
+
+    content: "-";
+}
+a.btn.btn-link:hover
+{
+	color:white;
+	text-decoration:none;
+	border:1px solid;
+	background-color:#328bca;
+}
+ul
+{
+	list-style:none;
 }
