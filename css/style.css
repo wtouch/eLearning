@@ -63,7 +63,8 @@ a:hover
  }
 .timer
 {
-	font-size:30px;
+	font-size:20px;
+	
 }
 
 .caption-2::after {
@@ -90,10 +91,7 @@ display: inline-block;
 position: relative;
 
 }
-a {
-color: #888;
-text-decoration: none;
-}
+
 .caption-2:hover::before, .caption-2:hover::after {
 opacity: 1;
 }
@@ -132,12 +130,13 @@ a.btn.btn-link::before
 
     content: "-";
 }
+
 a.btn.btn-link:hover
 {
 	font-weight:bold;
 	color:white;
 	text-decoration:none;
-	background-color:#328bca;
+	background-color:#0088cc;
 	border-radius:5px;
 
 }
@@ -145,6 +144,7 @@ a.btn.btn-link:hover
 {
 	background-color:#F7F5DC;
 	border-radius:25px;
+
 }
 ul
 {
@@ -167,3 +167,5 @@ video
 {
 	background:none;
 }*/
+
+<pseudo:after>
