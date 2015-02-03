@@ -125,12 +125,21 @@ a.btn.btn-link.collapsed::before
 	width:150px;
 	
 }
+.img2
+{
+	height:150px;
+	width:350px;
+	
+}
 a.btn.btn-link::before
 {
 
     content: "-";
 }
-
+a
+{
+	display:block;
+}
 a.btn.btn-link:hover
 {
 	
@@ -153,6 +162,12 @@ a.btn.btn-link:hover
    
 border: 1px solid black;
 padding: 15px;
+margin: 15px 0;
+}
+
+.contentblock
+{
+	padding: 15px;
 margin: 15px 0;
 }
 video
