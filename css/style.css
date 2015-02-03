@@ -121,7 +121,12 @@ a.btn.btn-link.collapsed::before
 {
     content: "+";
 }
-
+.im1
+{
+	height:150px;
+	width:150px;
+	
+}
 a.btn.btn-link::before
 {
 
