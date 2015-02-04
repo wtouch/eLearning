@@ -1,45 +1,44 @@
-
 <div class="row">
+<div class="col-md-12">
 	<nav class="navbar navbar-inverse" role="navigation">
-	
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#/add">Catagory1</a>
-                </li>
-                <li class="active"><a href="#/view">Catagory2</a>
-                </li>
-                <li class="active"><a href="#/view">Catagory3</a>
-                </li>
-				<li class="active"><a href="#/view">Catagory4</a>
-				</li>
-				<li class="active"><a href="#/home">Catagory5</a>
-				</li>
-				<li class="active"><a href="#/about">Catagory6</a>
-				</li>
-				<li class="active"><a href="#/about">Catagory7</a>
-				</li>
-				<li class="active"><a href="#/about">Catagory8</a>
-				</li>
-				<li class="active"><a href="#/about">Catagory9</a>
-				</li>
-				<li class="active"><a href="#/about">Catagory10</a>
-				</li>
-			</ul>
+		<ul class="nav navbar-nav">
+            <li class="active"><a href="#/add">Catagory1</a>
+            </li>
+            <li class="active"><a href="#/view">Catagory2</a>
+            </li>
+            <li class="active"><a href="#/view">Catagory3</a>
+            </li>
+			<li class="active"><a href="#/view">Catagory4</a>
+			</li>
+			<li class="active"><a href="#/home">Catagory5</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory6</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory7</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory8</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory9</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory10</a>
+			</li>
+		</ul>
 			<form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-            <input type="text" ng-model="search.title" class="form-control" placeholder="Search">
-       </div>
-    </form>
-	
+				<div class="form-group">
+				<input type="text" ng-model="search.title" class="form-control" placeholder="Search">
+				</div>
+			</form>
 	</nav>
-	</div>
-	<h4>Books...</h4>
+</div>
+</div>
+	
 <div class="row">
+<h4>Books...</h4>
 		<div class="col-md-4 col-lg-2 col-sm-6 col-xs-6">
 			<div class="dashboard">
 			<img src="img/tr.jpg"  class="img-responsive">
 			</div>
 			<h5>Author</h5>
-			
 		</div>
 		<div class="col-md-4 col-lg-2 col-sm-6 col-xs-6">
 			<div class="dashboard">
@@ -114,36 +113,24 @@
 		
 		<!--modal-->
 		<button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Select Book</button>
-<!--<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Select Book</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@twbootstrap">Select Book</button>-->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">New Books</h4>
-      </div>
-      <div class="modal-body">
-        <!--<form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>-->
+		</div>
+		<div class="modal-body">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="col-md-3">
-				<img src="img/book1.jpg">
-				</div>
-			<div class="col-md-3">
-				<img src="img/book4.jpg">
+					<img src="img/book1.jpg">
 				</div>
 				<div class="col-md-3">
-				<img src="img/book3.jpg">
+					<img src="img/book4.jpg">
+				</div>
+				<div class="col-md-3">
+					<img src="img/book3.jpg">
 				</div>	
 			</div>
 		</div>
@@ -153,7 +140,6 @@
         <button type="button" class="btn btn-primary">Select</button>
       </div>
     </div>
-	
 </div>
 
 <script>

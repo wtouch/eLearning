@@ -178,78 +178,87 @@ video
 {
 	background:none;
 }*/
-/*
-figure {
-	margin: 0;
-	position: relative;
-}
-figure img {
-	max-width: 100%;
-	display: block;
-	position: relative;
-}
-figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 20px;
-	background: #2c3f52;
-	color: #ed4e6e;
-}
-figcaption h3 {
-	margin: 0;
-	padding: 0;
-	color: #fff;
-}
-
-figcaption span:before {
-	content: 'by ';
-}
-figcaption a {
-	text-align: center;
-	padding: 5px 10px;
-	border-radius: 2px;
-	display: inline-block;
-	background: #ed4e6e;
-	color: #fff;
-}*/
-.cs-style-4 li {
-	perspective: 1700px;
-	perspective-origin: 0 50%;
-}
-.cs-style-4 figure {
-	transform-style: preserve-3d;
-}
-.cs-style-4 figure > div {
-	overflow: hidden;
-}
-.cs-style-4 figure img {
-	transition: transform 0.4s;
-}
-.no-touch .cs-style-4 figure:hover img,
-.cs-style-4 figure.cs-hover img {
-	transform: translateX(25%);
-}
-.cs-style-4 figcaption {
-	height: 100%;
-	width: 50%;
-	opacity: 0;
-	backface-visibility: hidden;
-	transform-origin: 0 0;
-	transform: rotateY(-90deg);
-	transition: transform 0.4s, opacity 0.1s 0.3s;
-}
-
-.no-touch .cs-style-4 figure:hover figcaption,
-.cs-style-4 figure.cs-hover figcaption {
-	opacity: 1;
-	transform: rotateY(0deg);
-	transition: transform 0.4s, opacity 0.1s;
-}
-.cs-style-4 figcaption a {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}
 
 
+element.style {
+z-index: 1003;
+top: 0px;
+left: 0px;
+margin-left: 0px;
+opacity: 1;
+transform: none;
+transition: all 300ms ease 0ms;
+-webkit-transition: all 300ms ease 0ms;
+width: 300px;
+}
+.main p{
+color: #AAA;
+padding: 20px 30px 0px 0px;
+font-size: 20px;
+line-height: 34px;
+font-weight: 300;
+text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+Pseudo ::before element
+*:after, *:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+.cd-dropdown > span {
+width: 80%;
+height: 60px;
+line-height: 60px;
+color: #999;
+font-weight: 500;
+font-size: 12px;
+background: #fff;
+display: block;
+padding: 0 50px 0 30px;
+position: relative;
+cursor: pointer;
+}
+
+.cd-dropdown > span:after {
+content: '\25BC';
+position: absolute;
+right: 0px;
+top: 15%;
+width: 70px;
+text-align: center;
+font-size: 8px;
+/*padding: 10px;*/
+height: 70%;
+line-height: 24px;
+border-left: 1px solid #ddd;
+}
+*:after, *:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+.fleft {
+width: 100%;
+float: none;
+text-align: center;
+}
+element.style {
+z-index: 1004;
+}
+.cd-active.cd-dropdown > span, .cd-active.cd-dropdown ul li span {
+box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.cd-active.cd-dropdown > span {
+color: #ccc;
+}
