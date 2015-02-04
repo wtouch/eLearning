@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+<div class="row">
+<div class="col-md-12">
+	<nav class="navbar navbar-inverse" role="navigation">
+		<ul class="nav navbar-nav">
+            <li class="active"><a href="#/add">Catagory1</a>
+            </li>
+            <li class="active"><a href="#/view">Catagory2</a>
+            </li>
+            <li class="active"><a href="#/view">Catagory3</a>
+            </li>
+			<li class="active"><a href="#/view">Catagory4</a>
+			</li>
+			<li class="active"><a href="#/home">Catagory5</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory6</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory7</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory8</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory9</a>
+			</li>
+			<li class="active"><a href="#/about">Catagory10</a>
+			</li>
+		</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+				<input type="text" ng-model="search.title" class="form-control" placeholder="Search">
+				</div>
+			</form>
+	</nav>
+</div>
+</div>
+	
+<div class="row">
+<h4>Books...</h4>
+		<div class="col-md-4 col-lg-2 col-sm-6 col-xs-6">
+=======
+
 
 <div class="row">
 	<div class="col-md-12 " >
@@ -37,35 +77,36 @@
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				
-		<ul class="nav navbar-nav">
-            <li class="active"><a href="#/add">Catagory1</a>
-            </li>
-            <li class="active"><a href="#/view">Catagory2</a>
-            </li>
-            <li class="active"><a href="#/view">Catagory3</a>
-            </li>
-			<li class="active"><a href="#/view">Catagory4</a>
-			</li>
-			<li class="active"><a href="#/home">Catagory5</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory6</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory7</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory8</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory9</a>
-			</li>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/add">Catagory1</a>
+                </li>
+                <li class="active"><a href="#/view">Catagory2</a>
+                </li>
+                <li class="active"><a href="#/view">Catagory3</a>
+                </li>
+				<li class="active"><a href="#/view">Catagory4</a>
+				</li>
+				<li class="active"><a href="#/home">Catagory5</a>
+				</li>
+				<li class="active"><a href="#/about">Catagory6</a>
+				</li>
+				<li class="active"><a href="#/about">Catagory7</a>
+				</li>
+				<li class="active"><a href="#/about">Catagory8</a>
+				</li>
+				<li class="active"><a href="#/about">Catagory9</a>
+				</li>
 				
-		</ul>
+			</ul>
 			
 		</div>
 	</nav>
-</div>
+	</div>
 </div>
 <h4>Books...</h4>
 <div class="row">
 		<div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
+>>>>>>> "file changed"
 			<div class="dashboard">
 			<img src="img/tr.jpg"  class="img-responsive">
 			</div>
