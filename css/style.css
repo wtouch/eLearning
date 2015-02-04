@@ -119,6 +119,16 @@ a.btn.btn-link.collapsed::before
 {
     content: "+";
 }
+
+#a1::before
+{
+    content: ">";
+}
+#a2::before
+{
+
+    content: "<";
+}
 .im1
 {
 	height:150px;
@@ -258,4 +268,8 @@ box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 .cd-active.cd-dropdown > span {
 color: #ccc;
+}
+#brs
+{
+	border-radius:20px;
 }
