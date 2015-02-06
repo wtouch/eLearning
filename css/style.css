@@ -163,11 +163,11 @@ a.btn.btn-link:hover
 	list-style:none;
 }*/
 
-.asideb {
+.sidebar {
    
 border: 1px solid black;
 padding: 15px;
-margin: 15px 0;
+margin-bottom:15px;
 }
 
 .contentblock
@@ -273,10 +273,11 @@ color: #ccc;
 {
 	border-radius:20px;
 }
-.contain
+.main-content
 {
 	border:1px solid gray;
 	margin: 15px 0px 15px 0px;
 	padding-top:15px;
+	padding-bottom:15px;
 	
 }
