@@ -273,3 +273,10 @@ color: #ccc;
 {
 	border-radius:20px;
 }
+.contain
+{
+	border:1px solid gray;
+	margin: 15px 0px 15px 0px;
+	padding-top:15px;
+	
+}
