@@ -281,3 +281,7 @@ color: #ccc;
 	padding-bottom:15px;
 	
 }
+.border-bottom { 
+border-bottom: 1px solid #ccc;
+margin-bottom: 15px;
+}

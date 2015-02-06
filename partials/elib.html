@@ -1,7 +1,31 @@
 
 <div class="row">
-	<div class="col-md-12 " >
-		<div class="row pull-right" >
+<div class="col-md-12 main-content">
+	<div class="col-md-12">
+		<div class="row">
+		<div class="col-md-6"></div>
+		<div class="col-md-6">
+		
+		
+		<div class="btn-group pull-right">
+			<span class="glyphicon glyphicon-th-large dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></span>
+			<span class="sr-only"></span>
+				<ul class="dropdown-menu" role="menu">
+				<li><a href="#">New Tab</a></li>
+				<li><a href="#">New Window</a></li>
+				<li><a href="#">History</a></li>
+				<li><a href="#">Recent Tab</a></li>
+				<li><a href="#">Zoom</a></li>
+				<li><a href="#">Find</a></li>
+				<li><a href="#">Exit</a></li>
+				</ul>
+		</div>
+		</div>
+		</div>
+		
+				<input type="text" class="form-control text-right" name="books" ng-model="books">
+			
+		<!--<div class="row pull-right" >
 			<div class="col-md-3 col-xs-12 col-sm-12 elib">
 			No Of Books
 			</div>
@@ -19,50 +43,11 @@
 						
 					</ul>
 			</div>
-		</div>
+		</div>-->
 		
 	</div>
-	</div>
-<div class="row">
-	<div  class="col-md-12 col-sm-4 ">
-	<nav class="navbar navbar-default">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  
-		</div>
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				
-		<ul class="nav navbar-nav">
-            <li class="active"><a href="#/add">Catagory1</a>
-            </li>
-            <li class="active"><a href="#/view">Catagory2</a>
-            </li>
-            <li class="active"><a href="#/view">Catagory3</a>
-            </li>
-			<li class="active"><a href="#/view">Catagory4</a>
-			</li>
-			<li class="active"><a href="#/home">Catagory5</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory6</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory7</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory8</a>
-			</li>
-			<li class="active"><a href="#/about">Catagory9</a>
-			</li>
-				
-		</ul>
-			
-		</div>
-	</nav>
-</div>
-</div>
+	
+
 <h4>Books...</h4>
 <div class="row">
 		<div class="col-md-2 col-lg-2 col-sm-4 col-xs-6">
@@ -172,7 +157,9 @@
       </div>
     </div>
 </div>
-
+</div>
+</div>
+</div>
 <script>
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
