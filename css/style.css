@@ -67,28 +67,28 @@ a:hover
 	
 }
 
-.caption-2::after {
-content: '\201C' attr(data-description) '\201D';
-top: 0;
-height: 70%;
-background: #7A96EA;
-
-
-font-size: 10px;
-text-align: center;
+.caption-2::after 
+{
+	content: '\201C' attr(data-description) '\201D';
+	top: 0;
+	height: 70%;
+	background: #7A96EA;
+	font-size: 10px;
+	text-align: center;
 }
-.caption-2::before {
-content: attr(data-title);
-top: 70%;
-height: 30%;
-background: #A0B4F0;
-font-size: 18px;
-font-weight: 300;
-text-align: center;
+.caption-2::before 
+{
+	content: attr(data-title);
+	top: 70%;
+	height: 30%;
+	background: #A0B4F0;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: center;
 }
 .caption {
-display: inline-block;
-position: relative;
+	display: inline-block;
+	position: relative;
 
 }
 
@@ -163,17 +163,19 @@ a.btn.btn-link:hover
 	list-style:none;
 }*/
 
-.sidebar {
+.sidebar 
+{
    
-border: 1px solid black;
-padding: 15px;
-margin-bottom:15px;
+	border: 1px solid black;
+	padding: 15px;
+	margin-bottom:15px;
+
 }
 
 .contentblock
 {
 	padding: 15px;
-margin: 15px 0;
+	margin: 15px 0;
 }
 video
 {
@@ -292,3 +294,6 @@ margin-bottom: 15px;
 }
 
 /* End Classmate CSS */
+.cbtn{
+		margin-top: 15px;
+	}
