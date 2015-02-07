@@ -44,21 +44,25 @@ a:hover
 {
 	text-decoration:none;
 }
-
-
 .gridblock
-{
+{	
 	padding:10px;
 	margin-bottom:20px;
 	border:1px solid gray;
 	border-radius:10px 10px 10px 10px;
 	box-shadow:4px 4px 4px rgb(229, 222, 222);
-	
+	background-color:#ccc
 }
 .gridblock img
 {
 	height:150px;
 	width:150px;
+	
+ }
+ .gridimg
+ {
+   
+	width:100px;
 	
  }
 .timer
@@ -283,9 +287,14 @@ color: #ccc;
 	padding-bottom:15px;
 	
 }
-.border-bottom { 
-border-bottom: 1px solid #ccc;
-margin-bottom: 15px;
+.main-content .btn
+{
+	margin-bottom:15px;
+}
+.border-bottom 
+{ 
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
 }
 
 /* Classmate CSS */
@@ -294,6 +303,76 @@ margin-bottom: 15px;
 }
 
 /* End Classmate CSS */
-.cbtn{
+.cbtn
+{
 		margin-top: 15px;
-	}
+	
+}
+.h4, .h5, .h6, h4, h5, h6 
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* Css For image hover effect*/
+
+.grid figure img {
+max-width: 100%;
+display: block;
+position: relative;
+}
+*:after, *:before 
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:before 
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.grid li {
+	display: inline-block;
+	width: 440px;
+	margin: 0;
+	padding: 20px;
+	text-align: left;
+	position: relative;
+}
+	touch .cs-style-3 figure:hover img, .cs-style-3 figure.cs-hover img {
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	transform: translateY(-50px);
+}
+style-3 figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+li {
+	display: list-item;
+	text-align: -webkit-match-parent;
+}
+.grid {
+	padding: 20px 20px 100px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: center;
+}
+/* End of Css For image hover effect*/
+
+
+#img1
+{
+	height:100px;
+	width:100px;
+}
