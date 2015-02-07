@@ -35,7 +35,8 @@ main h1{
 {
  width:500px;
  
-}.dformat
+}
+.dformat
 {
 	padding-top:0px;
 }
@@ -96,28 +97,30 @@ a:hover
 
 }
 
-.caption-2:hover::before, .caption-2:hover::after {
-opacity: 1;
+.caption-2:hover::before, .caption-2:hover::after
+ {
+	opacity: 1;
 }
 .caption-2::before {
-opacity: 0;
-position: absolute;
-width: 100%;
-color: #fff;
-padding: 20px;
--webkit-transition: opacity 0.3s;
--moz-transition: opacity 0.3s;
-transition: opacity 0.3s;
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	padding: 20px;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 0.3s;
 }
-.caption-2::before, .caption-2::after {
-opacity: 0;
-position: absolute;
-width: 100%;
-color: #fff;
-padding: 20px;
--webkit-transition: opacity 0.3s;
--moz-transition: opacity 0.3s;
-transition: opacity 
+.caption-2::before, .caption-2::after 
+{
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	color: #fff;
+	padding: 20px;
+	-webkit-transition: opacity 0.3s;
+	-moz-transition: opacity 0.3s;
+	transition: opacity 
 }
 a.btn.btn-link.collapsed::before
 {
@@ -194,86 +197,91 @@ video
 
 
 element.style {
-z-index: 1003;
-top: 0px;
-left: 0px;
-margin-left: 0px;
-opacity: 1;
-transform: none;
-transition: all 300ms ease 0ms;
--webkit-transition: all 300ms ease 0ms;
-width: 300px;
+	z-index: 1003;
+	top: 0px;
+	left: 0px;
+	margin-left: 0px;
+	opacity: 1;
+	transform: none;
+	transition: all 300ms ease 0ms;
+	-webkit-transition: all 300ms ease 0ms;
+	width: 300px;
 }
 .main p{
-color: #AAA;
-padding: 20px 30px 0px 0px;
-font-size: 20px;
-line-height: 34px;
-font-weight: 300;
-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+	color: #AAA;
+	padding: 20px 30px 0px 0px;
+	font-size: 20px;
+	line-height: 34px;
+	font-weight: 300;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
 }
 p {
-display: block;
--webkit-margin-before: 1em;
--webkit-margin-after: 1em;
--webkit-margin-start: 0px;
--webkit-margin-end: 0px;
+	display: block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
 }
 Pseudo ::before element
 *:after, *:before {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-padding: 0;
-margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
-.cd-dropdown > span {
-width: 80%;
-height: 60px;
-line-height: 60px;
-color: #999;
-font-weight: 500;
-font-size: 12px;
-background: #fff;
-display: block;
-padding: 0 50px 0 30px;
-position: relative;
-cursor: pointer;
+.cd-dropdown > span 
+{
+		width: 80%;
+		height: 60px;
+		line-height: 60px;
+		color: #999;
+		font-weight: 500;
+		font-size: 12px;
+		background: #fff;
+		display: block;
+		padding: 0 50px 0 30px;
+		position: relative;
+		cursor: pointer;
 }
 
 .cd-dropdown > span:after {
-content: '\25BC';
-position: absolute;
-right: 0px;
-top: 15%;
-width: 70px;
-text-align: center;
-font-size: 8px;
-/*padding: 10px;*/
-height: 70%;
-line-height: 24px;
-border-left: 1px solid #ddd;
+		content: '\25BC';
+		position: absolute;
+		right: 0px;
+		top: 15%;
+		width: 70px;
+		text-align: center;
+		font-size: 8px;
+		/*padding: 10px;*/
+		height: 70%;
+		line-height: 24px;
+		border-left: 1px solid #ddd;
 }
 *:after, *:before {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-padding: 0;
-margin: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
 }
-.fleft {
-width: 100%;
-float: none;
-text-align: center;
+.fleft 
+{
+		width: 100%;
+		float: none;
+		text-align: center;
 }
-element.style {
-z-index: 1004;
+element.style 
+{
+	z-index: 1004;
 }
-.cd-active.cd-dropdown > span, .cd-active.cd-dropdown ul li span {
-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+.cd-active.cd-dropdown > span, .cd-active.cd-dropdown ul li span 
+{
+		box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
-.cd-active.cd-dropdown > span {
-color: #ccc;
+.cd-active.cd-dropdown > span 
+{
+	color: #ccc;
 }
 #brs
 {
@@ -287,10 +295,7 @@ color: #ccc;
 	padding-bottom:15px;
 	
 }
-.main-content .btn
-{
-	margin-bottom:15px;
-}
+
 .border-bottom 
 { 
 	border-bottom: 1px solid #ccc;
@@ -308,7 +313,7 @@ color: #ccc;
 		margin-top: 15px;
 	
 }
-.h4, .h5, .h6, h4, h5, h6 
+.h3,.h4, .h5, .h6, h4, h5, h6 
 {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -316,10 +321,11 @@ color: #ccc;
 
 /* Css For image hover effect*/
 
-.grid figure img {
-max-width: 100%;
-display: block;
-position: relative;
+.grid figure img 
+{
+	max-width: 100%;
+	display: block;
+	position: relative;
 }
 *:after, *:before 
 {
@@ -338,7 +344,8 @@ position: relative;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.grid li {
+.grid li 
+{
 	display: inline-block;
 	width: 440px;
 	margin: 0;
@@ -352,7 +359,8 @@ position: relative;
 	-ms-transform: translateY(-50px);
 	transform: translateY(-50px);
 }
-style-3 figure img {
+style-3 figure img 
+{
 	-webkit-transition: -webkit-transform 0.4s;
 	-moz-transition: -moz-transform 0.4s;
 	transition: transform 0.4s;
@@ -376,3 +384,9 @@ li {
 	height:100px;
 	width:100px;
 }
+
+/* toolbar CSS */
+.toolbar .form-inline{
+	display: inline-block;
+}
+
