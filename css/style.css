@@ -285,3 +285,10 @@ color: #ccc;
 border-bottom: 1px solid #ccc;
 margin-bottom: 15px;
 }
+
+/* Classmate CSS */
+.classmate-sidebar .input-group, .classmate-sidebar .btn{
+	margin-bottom: 15px;
+}
+
+/* End Classmate CSS */
