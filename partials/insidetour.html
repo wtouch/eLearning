@@ -1,17 +1,22 @@
 <div class="row">
-<div class="col-md-12 main-content">
-	<div class="col-md-3">
-	<div ng-include="'partials/components/sidebar.html'">
+	<div class="col-md-12 main-content">
+		<div class="row">
+			<div class="col-md-3">
+				<div ng-include="'partials/components/sidebar.html'">
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div class="row">
+					<div class="col-md-12">
+						<video controls>
+						<source src="movie.mp4" type="video/mp4">
+						<source src="movie.ogg" type="video/ogg">
+						</video>
+					</div>
+					<div class="col-md-12" ng-include="'partials/components/comment.html'">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	</div>
-	<div class="col-md-9">
-	<video controls>
-	<source src="movie.mp4" type="video/mp4">
-	<source src="movie.ogg" type="video/ogg">
-	</video>
-	
-	<h5>Comments</h5>
-	<p>Please write Your Comments Here</p>
-	</div>
-</div>
 </div>
