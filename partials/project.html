@@ -1,7 +1,14 @@
 <section>
 	<div class="row">
-	<div class="col-md-12 contain">
-		<div class="col-md-2 asideb">
+	<div class="col-md-12 main-content">
+			<div class="row border-bottom" >	
+				<div class="col-md-6" ng-include="'partials/components/breadcrumb.html'">
+				</div>	
+				<div class="col-md-6" ng-include="'partials/components/menu-back.html'">
+				</div>				
+			</div>
+	
+		<div class="col-md-3">
 			<div>
 				<input type="text" ng-model="search.title" class="form-control glyphicon glyphicon-search-right" placeholder="Search">
 			</div>
@@ -53,7 +60,7 @@
 			</div>
 			
 		</div>
-		<div class="col-md-10">
+		<div class="col-md-9">
 		<table class="table table-bordered">
 									<thead>Project Details</thead>
 									<tbody>
