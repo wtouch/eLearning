@@ -1,155 +1,20 @@
 <div class="row">
 	<div class="col-md-12 main-content">
 		<div class="row">
-			<div class="col-md-12 border-bottom">
-				<ol class="breadcrumb pull-left">
-					<li><a href="#">Dashboard</a></li>
-					<li class="active">e-Learning</li>
-					<li class="active">Catagory</li>
-				</ol>
-				<div class="pull-right toolbar">
-					<span class="book-nos">No of Books: <span id="bookNo">**</span></span>
-					<form class="form-inline">
-						<div class="input-group">
-							<input type="text" class="form-control iconback" placeholder="Search">
-							<span class="input-group-btn">
-							<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search iconsearch"></span></button>
-							</span>
-						</div>
-					</form>
-					<button class="btn btn-default" type="button"><span class="glyphicon glyphicon glyphicon-arrow-left iconback"></span></button>
-					<a class="btn btn-default">
-						<span class="glyphicon glyphicon-th-large dropdown-toggle iconback" data-toggle="dropdown" aria-expanded="false"></span>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">New Tab</a></li>
-							<li><a href="#">New Window</a></li>
-							<li><a href="#">History</a></li>
-							<li><a href="#">Recent Tab</a></li>
-							<li><a href="#">Zoom</a></li>
-							<li><a href="#">Find</a></li>
-							<li><a href="#">Exit</a></li>
-						</ul>
-					</a>
+				<div class="col-md-12" ng-include="'partials/components/toolbar.html'">
 				</div>
-			</div>
-			
-			
 			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-12">
-						<h4 class="pull-left">Books</h4>
-						<!-- Split button -->
-						<div class="btn-group pull-right">
-							<button type="button" class="btn btn-default">Catagory</button>
-							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							<span class="caret"></span>
-							</button>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#">Technical</a></li>
-									<li><a href="#">Story</a></li>
-									<li><a href="#">GK</a></li>
-									<li><a href="#">Science</a></li>
-									<li><a href="#">Maths</a></li>
-									<li><a href="#">History</a></li>
-								</ul>
-						</div>
-					</div>
+				<div class="col-md-12" ng-include="'partials/components/row.html'">
 				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr.jpg"  class="img-responsive">
-					</div>
+				<div class="col-md-12" ng-include="'partials/components/row.html'">
 				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr1.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive" >
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr4.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr5.jpg" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr5.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive" >
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr4.jpg"  class="img-responsive">
-					</div>
-				</div>		
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr5.jpg" class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr5.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive" >
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr4.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive">
-					</div>
-				</div>
-				<div class="col-md-3 col-lg-2 col-sm-4 col-xs-6">
-					<div class="gridblock">
-						<img src="img/tr2.jpg"  class="img-responsive">
-					</div>
+				<div class="col-md-12" ng-include="'partials/components/row.html'">
 				</div>
 			</div>
 		</div>	
 		<!--modal-->
 	<!--<button type="button" class="btn btn-success center-block" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Select Book</button>
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">-->
 		<!--<div class="modal-content">
 			<div class="modal-header">
@@ -177,10 +42,10 @@
 			</div>
 		</div>
 	</div>-->
-	</div>
+	
 </div>
 </div>
-
+</div>
 <!--<script>
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
