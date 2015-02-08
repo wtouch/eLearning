@@ -122,10 +122,7 @@ a:hover
 	-moz-transition: opacity 0.3s;
 	transition: opacity 
 }
-a.btn.btn-link.collapsed::before
-{
-    content: "+";
-}
+
 
 #a1::before
 {
@@ -142,8 +139,11 @@ a.btn.btn-link.collapsed::before
 	width:150px;
 	
 }
-
-a.btn.btn-link::before
+ul > li > a.btn.collapsed::before
+{
+    content: "+";
+}
+ul > li > a.btn::before
 {
 
     content: "-";
