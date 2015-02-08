@@ -3,39 +3,17 @@
 	<div class="col-md-12 main-content">
 		<div class="row">
 		<div class="col-md-12 border-bottom">
-				<ol class="breadcrumb pull-left">
-					<li><a href="#">Dashboard</a></li>
-					<li class="active">My Classmates</li>
-					
-				</ol>
-				<div class="pull-right toolbar">
-					<form class="form-inline">
-						<div class="input-group">
-							<input type="text" class="form-control iconback" placeholder="Search">
-							<span class="input-group-btn">
-							<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search iconsearch"></span></button>
-							</span>
-						</div>
-					</form>
-					<button class="btn btn-default" type="button"><span class="glyphicon glyphicon glyphicon-arrow-left iconback"></span></button>
-					<a class="btn btn-default">
-						<span class="glyphicon glyphicon-th-large dropdown-toggle iconback" data-toggle="dropdown" aria-expanded="false"></span>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#">New Tab</a></li>
-							<li><a href="#">New Window</a></li>
-							<li><a href="#">History</a></li>
-							<li><a href="#">Recent Tab</a></li>
-							<li><a href="#">Zoom</a></li>
-							<li><a href="#">Find</a></li>
-							<li><a href="#">Exit</a></li>
-						</ul>
-					</a>
+			<div class="row">
+				<div class="col-md-6" ng-include="'partials/components/breadcrumb.html'">
 				</div>
+				<div class="col-md-6" ng-include="'partials/components/menu-back.html'">
+				</div>
+			</div>	
 		</div>
 		</div>
 		
 		
-		<div class="col-md-2 sidebar">
+		<div class="col-md-2">
 				<img src="img/blog_pic2.jpg" class="img-circle center-block">
 				<br>
 				<b>Name:</b><br>
@@ -65,7 +43,6 @@
 					</ul>
 					</li>
 					</ul>
-					
 					<ul class="list-unstyled">
 					<li>
 					<a class="btn btn-link collapsed" id="a1" data-toggle="collapse" data-target="#demo2">My Friends</a>
