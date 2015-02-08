@@ -385,4 +385,7 @@ li {
 .toolbar .form-inline{
 	display: inline-block;
 }
-
+.bmargin
+{
+	margin-bottom:10px;
+}
