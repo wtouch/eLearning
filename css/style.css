@@ -148,11 +148,16 @@ ul > li > a.btn::before
 
     content: "-";
 }
+
+.space
+{
+	padding-left:20px;
+}
 a
 {
 	display:block;
 }
-a.btn.btn-link:hover
+/*a.btn.btn-link:hover
 {
 	
 	color:white;
@@ -164,7 +169,7 @@ a.btn.btn-link:hover
 {
 	background-color:#F7F5DC;
 
-}
+}*/
 /*ul
 {
 	list-style:none;
