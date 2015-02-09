@@ -1,60 +1,54 @@
 <div class="row">
 	<div class="col-md-12 main-content">
-		<div class="row">
-			<div class="col-md-12 border-bottom">
-				<div class="row">
-				<div class="col-md-6" ng-include="'partials/components/breadcrumb.html'">
-				</div>
-				<div class="col-md-6" ng-include="'partials/components/menu-back.html'">
-				</div>
-				</div>
-			</div>
+		<div class="row border-bottom">
+			<!--<div class="col-md-12 border-bottom">
+				<div class="row">-->
+					<div class="col-md-6" ng-include="'partials/components/breadcrumb.html'"></div>
+					<div class="col-md-6" ng-include="'partials/components/menu-back.html'"></div>
+				<!--</div>
+			</div>-->
 		</div>
 		<div class="row">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-12" ng-include="'partials/components/row.html'">
-					</div>
-				</div>	
-				<div class="row">
-					<div class="col-md-12" ng-include="'partials/components/row.html'">
-					</div>
-				</div>	
-			</div>
+			<!--<div class="col-md-12">
+				<div class="row">-->
+					<div class="col-md-12" ng-include="'partials/components/row.html'"></div>
+				<!--</div>	
+				<div class="row">-->
+					<div class="col-md-12" ng-include="'partials/components/row.html'"></div>
+				<!--</div>	
+			</div>-->
 		</div>
-<!-- popup modal -->
-	<div class="text-center bmargin">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">All Assignments</button>
-	</div>
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header bmargin">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="exampleModalLabel">All Assignments</h4>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="col-md-3">
-							<h5>Index</h5>
-							<div class="dropdown">
-								  <a id="dLabel" data-target="#" href="partials/assignment.html" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-									Assignments
-									<span class="caret"></span>
-								  </a>
-
-								  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-									<li><a href="#">Assignment 1</a></li>
-									<li><a href="#">Assignment 2</a></li>
-									<li><a href="#">Assignment 3</a></li>
-									<li><a href="#">Assignment 4</a></li>
-									<li><a href="#">Assignment 5</a></li>
-									<li><a href="#">Assignment 6</a></li>
-									
-								  </ul>
+		<!-- popup modal -->
+		<div class="text-center bmargin">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">All Assignments</button>
+		</div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header bmargin">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="exampleModalLabel">All Assignments</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-3">
+								<h5>Index</h5>
+								<div class="dropdown">
+									<a id="dLabel" data-target="#" href="partials/assignment.html" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+										Assignments
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<li><a href="#">Assignment 1</a></li>
+										<li><a href="#">Assignment 2</a></li>
+										<li><a href="#">Assignment 3</a></li>
+										<li><a href="#">Assignment 4</a></li>
+										<li><a href="#">Assignment 5</a></li>
+										<li><a href="#">Assignment 6</a></li>
+									</ul>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-9">
+							<div class="col-md-9">
 								<table class="table table-bordered">
 									<thead> Assignment Details</thead>
 									<tbody>
@@ -65,8 +59,7 @@
 											<th>Score</th>
 											<th>Waitage</th>
 											<th>Model Assign</th>
-										</tr>
-										
+										</tr>											
 										<tr>
 											<th></th>
 											<th></th>
@@ -84,28 +77,24 @@
 											<th></th>
 										</tr>
 									</tbody>
-  
-								</table>
-								
+								</table>									
+							</div>
 						</div>
 					</div>
-				  </div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						<button type="button" class="btn btn-primary">New Assignment</button>
 					</div>
 				</div>
 			</div>
-	</div>
-	<!-- end pop up -->
-	
-	
-	<!--ProgressBar-->
-	<div class="row">
-		<div class="col-md-12" ng-include="'partials/components/progress.html'">
+		</div>
+		<!-- end pop up -->
+		<!--ProgressBar-->
+		<div class="row">
+			<div class="col-md-12" ng-include="'partials/components/progress.html'">
+			</div>
 		</div>
 	</div>
-</div>
 </div>
 
 
