@@ -1,30 +1,30 @@
 <section>
 <div class="row">
-	<div class="col-md-12 contain">
-	<div class="col-md-2"></div>
-	<div class="col-md-10">
-		<form class="form-horizontal" role="form" name="myForm" novalidate="novalidate" >
-			<h3>Registration</h3>
-			<hr>
-			<p>Please register a free account, before you start distance learning. Registration is quick and free! Please note that fields marked * are required.</p>
-			<div class="form-group">
-							<label for="fullname" class="col-md-2 control-label">Name* </label>
+	<div class="col-md-12 main-content">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-10">
+				<form class="form-horizontal" role="form" name="myForm" novalidate="novalidate" >
+					<h3>Registration</h3>
+					<hr>
+					<p>Please register a free account, before you start distance learning. Registration is quick and free! Please note that fields marked * are required.</p>
+					<div class="form-group">
+						<label for="fullname" class="col-md-2 control-label">Name* </label>
 						<div class="col-md-8">
                             <input type="text" class="form-control" id="fullname" ng-model="full_name" name="fullname" placeholder="Enter Name" required>
 							<span style="color:red" ng-show="myForm.fullname.$dirty && myForm.fullname.$invalid">
 							<span ng-show="myForm.fullname.$error.required">Name is required.</span>
 							</span>	
                         </div>						
-			</div>
-			
-			<div class="form-group">
-							<label for="Address" class="col-md-2 control-label">Address*</label>
-							<div class="col-md-8">
+					</div>			
+					<div class="form-group">
+						<label for="Address" class="col-md-2 control-label">Address*</label>
+						<div class="col-md-8">
 							<textarea  class="form-control" id="Address" ng-model="address" name="Address" placeholder="Enter address" required></textarea>
 							<span style="color:red" ng-show="myForm.Address.$dirty && 	myForm.Address.$invalid">
-							<span ng-show="myForm.Address.$error.required">Address is required.</span>
+								<span ng-show="myForm.Address.$error.required">Address is required.</span>
 							</span>
-							</div>						
+						</div>						
 			</div>
 			
 			<div class="form-group">
