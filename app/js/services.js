@@ -238,6 +238,9 @@ define(['app'], function (app) {
 			obj.setBase = function(path){
 				serviceBase = path;
 			};
+			obj.capitalize = function(string) {
+				return string.charAt(0).toUpperCase() + string.slice(1);
+			}
 			obj.stringify = function(oldObj){
 				var newObj = {};
 				angular.forEach(oldObj, function(value, key) {

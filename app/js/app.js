@@ -67,20 +67,17 @@ define(['angular',
 				
 				.when('/dashboard/enquiry/:mailId?/:id?', route.resolve({controller:'enquiry', template: 'enquiry',label:"Mail Box"}, 'enquiry/'))
 				
-				.when('/dashboard/templates/:tempPart?', route.resolve({controller:'templates', template: 'templates',label:"Template"}, 'templates/'))
+				.when('/dashboard/courses', route.resolve({controller:'courses', template: 'courses',label:"My Courses"}, 'courses/'))
 				
-				// Always Add Static Route before dynamic route/dynamic parameter
-				.when('/dashboard/business/addbusiness/:id?', route.resolve({controller:'addbusiness', template: 'addbusiness',label:"Add New Business"}, 'business/addbusiness/'))
+				.when('/dashboard/courses/:views?', route.resolve({controller:'courses', template: 'courses',label:"My Courses"}, 'courses/'))
 				
-				.when('/dashboard/business/adddetails/:id?', route.resolve({controller:'adddetails', template: 'adddetails',label:"Business Details"}, 'business/adddetails/'))
+				.when('/dashboard/tests', route.resolve({controller:'tests', template: 'tests',label:"Tests"}, 'tests/'))
 				
-				.when('/dashboard/business/products/:productView?', route.resolve({controller:'products', template: 'products',label:"Products & Services"}, 'business/products/'))
+				.when('/dashboard/tests/:views?', route.resolve({controller:'tests', template: 'tests',label:"My Tests"}, 'tests/'))
 				
-				.when('/dashboard/business/:businessView?', route.resolve({controller:'business', template: 'business',label:"Business"}, 'business/'))
+				.when('/dashboard/assignments', route.resolve({controller:'assignments', template: 'assignments',label:"My Assignments"}, 'assignments/'))
 				
-				.when('/dashboard/websites/websettings/:id', route.resolve({controller:'websettings', template: 'websettings',label:"Website Settings"}, 'websites/websettings/'))
-				
-				.when('/dashboard/websites/:websitePart?', route.resolve({controller:'websites', template: 'websites',label:"Websites"}, 'websites/'))
+				.when('/dashboard/assignments/:views?', route.resolve({controller:'assignments', template: 'assignments',label:"My Assignments"}, 'assignments/'))
 				
                 .otherwise({ redirectTo: '/' });
 				
@@ -91,8 +88,9 @@ define(['angular',
 		$rootScope.$on("$routeChangeStart", function (event, next, current) {
 			$rootScope.userDetails = dataService.parse(dataService.userDetails);
 			$rootScope.breadcrumbs = breadcrumbs;
+			
 			$rootScope.appConfig = {
-				metaTitle : "Small Business",
+				metaTitle : "Mission eLearning",
 				headerTitle : next.$$route.label,
 				subTitle : next.$$route.label,
 				assetPath : '../server-api'
