@@ -1,0 +1,68 @@
+<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">	
+	{{alert.msg}}
+</alert>
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<th>Sr.No.</th>
+			<th>User Name</th>
+			<th>User Group</th>
+			<th>Email Id</th>
+			<th>Registered Date</th>
+			<th>Manage</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="users in userList | orderBy:'id'">
+				<td>{{((usersListCurrentPage - 1) * pageItems ) + $index + 1}}</td>
+				<td>{{users.username}}</td>
+				<td style="max-width:150px">
+				
+				<div class="input-group">
+					<p class="form-control-static" ng-hide="users.boxId ==1">{{users.group_name}}</p>
+					<select ng-hide="users.boxId ==0 || !users.boxId" class="form-control" ng-show="users.boxId == 1" ng-model="users.group_id" ng-options="item.id as item.group_name for item in groups" ng-required="true">
+						<option value="">Select Group</option>
+					</select>
+					<div class="input-group-btn" >
+						<a type="button" ng-class="(users.boxId == 0 || !users.boxId) ? 'btn btn-info' : 'btn btn-success'" ng-model="users.boxId" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'" ng-change="editGroupName('group_id', users.group_id, users.id, users.boxId); users.group_name = changeGroupName(users.group_id, groups)">
+							<span ng-class="(users.boxId ==1) ? 'glyphicon glyphicon-ok' : 'glyphicon glyphicon-pencil'"></span>
+						</a>
+					</div>
+					
+				</div>
+				</td>
+				<td>{{users.email}}</td>
+				<td>{{users.register_date}}</td>
+				<td>
+					<div class="btn-group">
+						<a type="button" tooltip="Reset Password" class="btn btn-info " ng-model="users.email" ng-click="forgotPass('email', users.email, users.id)">
+							<span class="glyphicon glyphicon-refresh"></span>
+						</a>
+					</div>
+					<div class="btn-group">
+						<a class="btn btn-info" href="#/dashboard/users/adduser/{{users.id}}" tooltip-animation="true" tooltip="Edit User Information">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</a>
+					</div>
+					
+					<div class="btn-group">
+						<button type="button" tooltip="{{dynamicTooltip(users.baned, 'Baned','Re-active')}}" ng-class="(users.baned==0) ? 'btn btn-success' : 'btn btn-danger'" ng-model="users.baned" ng-change="changeStatusFn('baned', users.baned, users.id)" btn-checkbox btn-checkbox-true="'0'" btn-checkbox-false="'1'">
+							<span ng-if="users.baned==0" class="glyphicon glyphicon-repeat"></span>
+							<span ng-if="users.baned==1" class="glyphicon glyphicon-ban-circle"></span>
+						</button>
+					</div>
+					
+					<div class="btn-group" role="group" aria-label="third group">
+						<button type="button" tooltip="{{dynamicTooltip(users.status, 'Remove','Approve')}}" ng-class="(users.status==1) ? 'btn btn-success' : 'btn btn-danger'" ng-model="users.status" ng-change="changeStatusFn('status', users.status, users.id)" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+							<span ng-if="users.status==1" class="glyphicon glyphicon-ok"></span>
+							<span ng-if="users.status==0" class="glyphicon glyphicon-remove"></span>
+						</button>
+					</div>	          
+				</td>
+			</tr>					
+		</tbody>					
+	</table>
+</div>
+<div class="text-center">				
+	<pagination total-items="totalRecords" items-per-page="pageItems"  ng-model="usersListCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-change="pageChanged(usersListCurrentPage)"></pagination>
+	<pre>Page: {{usersListCurrentPage}} / {{numPages}}</pre>
+</div>	

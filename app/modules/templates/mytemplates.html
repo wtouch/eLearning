@@ -1,0 +1,52 @@
+<h3>My Templates</h3>
+	<div class="row">
+		<div class="col-sm-4"> 
+			<div class="bottomspace">
+				<label for="search" class="control-label">Search </label>		
+					<input id="search" type="text" class="form-control" ng-change="searchFilter('template_name', searchProp)" ng-model="searchProp" placeholder="search"/>
+			</div>
+		</div>			 				  
+		<div class="col-sm-4">
+			<div class="bottomspace">
+				<label for="sort" class="control-label">Sort by Order</label>
+					<select id="sort" class="form-control" ng-model="sort"> 
+						<option value="">Select Order</option>		<!-- added value & selected attr -->	
+						<option value="-template_name">Desending</option>
+						<option value="template_name">Asending</option>  
+					</select>
+			</div>
+		</div>
+	</div>
+	<div class="table-responsive">		
+		<table class="table table-bordered">
+			<thead>
+				<th>Sr.No.</th>
+				<th>Template Name</th>
+				<th>Create Date</th>
+				<th>Modified Date</th>
+				<th>Manage</th>
+			</thead>
+				<tbody>
+					<tr ng-repeat="x in templates | orderBy : sort">
+						<td>{{((myTempCurrentPage - 1) * pageItems) + $index + 1 }}</td>
+						<td>{{x.template_name}}</td>
+						<td>{{x.date | date:'MM/dd/yyyy'}}</td>
+						<td>{{x.modified_date}}</td>
+						<td>
+							<div class="btn-group">
+								<a ng-click="open('modules/templates/viewTemplate.html', x.id)" class="btn btn-primary responsive"> Prieview</a>
+							</div>
+							<div class="btn-group">
+								<button type="button" tooltip="{{dynamicTooltip(x.status, 'Delete', 'Active')}}" ng-class="(x.status==1) ? 'btn btn-success' : 'btn btn-danger'" ng-model="x.status" ng-change="deleted(x.id, x.status)" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+								<span class="glyphicon glyphicon-remove"></span>
+								</button>							
+							</div>
+						</td>
+					</tr>			
+				</tbody>					
+		</table>
+	</div>
+	<div class="text-center">				
+		<pagination total-items="totalRecords" items-per-page="pageItems"  ng-model="myTempCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-change="pageChanged(myTempCurrentPage)"></pagination>
+		<pre>Page: {{myTempCurrentPage}} / {{numPages}}</pre>
+	</div>	

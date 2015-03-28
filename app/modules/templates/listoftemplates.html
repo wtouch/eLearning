@@ -1,0 +1,82 @@
+<h3>Template List</h3>
+	<div class="row">
+		<div class="col-sm-3"> 
+			<div class="bottomspace">
+				<label for="search" class="control-label">Search </label>		
+					<input id="search" type="text" class="form-control" ng-change="searchFilter('template_name', searchProp)" ng-model="searchProp" placeholder="search"/>
+			</div>
+		</div>			 				  
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="sort" class="control-label">Sort by Order</label>
+					<select id="sort" class="form-control" ng-model="sort"> 
+						<option value="">Select Order</option>	<!-- added value & selected attr -->	
+						<option value="-template_name">Desending</option>
+						<option value="template_name">Asending</option>  
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="status" class="control-label">Select Status</label>
+					<select id="status" class="form-control" 
+					ng-change="changeStatus('status',showStatus)" ng-model="showStatus" ng-init="showStatus=1">
+						<option value="1">Active</option>
+						<option value="0">Deleted</option>
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="status" class="control-label">Filter By Temp Type</label>
+					<select id="status" class="form-control" ng-model="type" ng-change="changeStatus('template_type',type)" >
+						<option value="" selected>Select type</option> <!-- add value attribute empty & selected for initial selected option -->
+						<option value="public">Public</option>
+						<option value="private">Private</option>
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="bottomspace">
+				<label for="featured" class="control-label">Filter By Category</label>
+					<select id="featured" class="form-control" ng-model="filterCategory" 
+					ng-change="changeStatus('category',filterCategory)">
+						<option value="" selected>Select Category</option> <!-- added value & selected attr -->
+						<option value="mobile" >Mobile</option>
+						<option value="tab">Tab</option> 
+					</select>
+			</div>
+		</div>
+	</div>
+	<div class="table-responsive">		
+		<table class="table table-bordered">
+			<thead>
+				<th>Sr.No.</th>
+				<th>Template Name</th>
+				<th>Create Date</th>
+				<th>Category</th>
+				<th>Price</th>
+				<th>Select Template</th>
+			</thead>
+				<tbody>
+					<tr ng-repeat="x in templates | orderBy:sort">
+						<td>{{((tempListCurrentPage - 1) * pageItems) + $index + 1 }}</td>
+						<td>{{x.template_name}}</td>
+						<td>{{x.date | date:'MM/dd/yyyy'}}</td>
+						<td>{{x.category}}</td>
+						<td>{{x.template_price}}</td>
+						<td>
+						<a ng-click="showWebsitedetails('modules/templates/viewWebsitelist.html', x.id)" class="btn btn-success" ng-show="x.template_price=='free'">Apply</a>
+						<button href="#" class="btn btn-warning" title="Buy Template" ng-show="x.template_price!='free'"> Buy </button>
+							<div class="btn-group">
+									<a ng-click="open('modules/templates/viewTemplate.html', x.id)" class="btn btn-primary responsive"> Prieview</a>
+							</div>
+						</td>	
+					</tr>	
+				</tbody>					
+		</table>
+	</div>
+	<div class="text-center">				
+		<pagination total-items="totalRecords" items-per-page="pageItems"  ng-model="tempListCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-change="pageChanged(tempListCurrentPage,template_type)"></pagination>
+		<pre>Page: {{tempListCurrentPage}} / {{numPages}}</pre>
+	</div>		

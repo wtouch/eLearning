@@ -1,0 +1,86 @@
+<h3>Website List</h3>
+	<div class="row">
+		<div class="col-sm-4"> 
+			<div class="bottomspace">
+				<label for="search" class="control-label">Search </label>		
+					<input id="search" type="text" class="form-control" ng-model="searchProper" ng-change="searchFilter('domain_name', searchProper)" placeholder="search"/>
+			</div>
+		</div>			 				  
+		<div class="col-sm-4">
+			<div class="bottomspace">
+				<label for="sort" class="control-label">Sort by Order</label>
+					<select id="sort" class="form-control" ng-model="sort"> 
+						<option value="">Select Order</option><!-- added value & selected attr -->	
+						<option value="-domain_name">Desending</option>
+						<option value="domain_name">Asending</option>  
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="status" class="control-label">Select Status</label>
+					<select id="status" class="form-control" ng-change="changeStatusFn('status',showStatus)" ng-model="showStatus" ng-init="showStatus='1'">
+						<option value="1" selected>Active</option>
+						<option value="0">Deleted</option>
+						<option value="2">Expired</option>   
+					</select>
+			</div>
+		</div>
+	</div>
+	<div class="table-responsive">		
+		<table class="table table-bordered table-hover">
+			<thead>
+				<th>Sr.No.</th>
+				<th>Site Names</th>
+				<th>Start Date</th>
+				<th>Exp Date</th>
+				<th>status</th>
+				<th>Manage</th>
+			</thead>
+				<tbody>
+					<tr ng-repeat="x in website | orderBy : sort">
+					<td>{{((webListCurrentPage - 1) * pageItems) + $index + 1 }}</td>
+					<td>{{x.domain_name}} 
+					<a type="button" class="btn btn-warning pull-right" ng-model="x.boxId" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'" ng-click="showInput($event,'opened')" ng-change="editDomainName('domain_name', x.domain_name, x.id,x.boxId)" tooltip="Edit">
+					<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+					<input type="text" id="domain_name" class="form-control" name="domain_name" ng-show="x.boxId == 1" ng-model="x.domain_name" ng-required="true"/>
+					</td>
+					<td>{{x.registered_date}}</td>
+					<td>{{x.expiry_date}}</td>
+					<td>{{x.status}}</td>
+					<td>
+					<div class="btn-toolbar" role="toolbar" aria-label="...">	
+							<a ng-click="open('modules/websites/viewWebsite.html', x.id)" class="btn btn-primary responsive"> View Details</a>
+
+							<button type="button" tooltip="{{dynamicTooltip(x.status, 'Delete', 'Active')}}" ng-class="(x.status==1) ? 'btn btn-success' : 'btn btn-danger'" ng-model="x.status" ng-change="deleted( x.status, x.id)"" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'"><span class = "glyphicon glyphicon-remove"></span></button>
+							
+							<button type="button" tooltip="{{dynamicTooltip(x.expired, 'expired', 'Reactive')}}"ng-class="(x.expired==0) ? 'btn btn-danger' : 'btn btn-success'" ng-model="x.expired" ng-change="changeStatusFn('expired',x.id, x.expired)" btn-checkbox btn-checkbox-true="0" btn-checkbox-false="1"><span class="glyphicon glyphicon-ok"></span></button>
+						
+							<div class="btn-group">
+								<a type="button" tooltip="Edit" class="btn btn-warning glyphicon glyphicon-pencil" ng-click="getWebsitedetails(config)" href="#/dashboard/websites/websettings/{{x.id}}"></a>	
+							</div>
+							
+							<div class="btn-group">
+								<a href="{{'http://'+x.domain_name}}" target="_blank" class="btn btn-primary">Prieview
+								</a>		
+							</div>
+					</div>
+					</td>
+					</tr>
+				</tbody>					
+		</table>
+	</div>
+	<div class="text-center">				
+		<pagination total-items="totalRecords" items-per-page="pageItems"  ng-model="webListCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-change="pageChanged(webListCurrentPage,domain_name)"></pagination>
+		<pre>Page: {{webListCurrentPage}} / {{numPages}}</pre>		
+	</div>	
+	
+	
+	<!--  <div class="input-group bottomspace">		
+					<input id="search" type="text" class="form-control" ng-change="searchFilter('business_name', searchProp)" ng-model="searchProp" placeholder="search"/>
+					<span class="input-group-btn">
+					<button class="btn btn-success" type="button">
+						<span class="glyphicon glyphicon-search iconsearch"></span>
+					</span>	
+					</div>	 -->

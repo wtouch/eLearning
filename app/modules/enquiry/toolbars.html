@@ -1,0 +1,46 @@
+<div class="row">
+	<div class="col-md-12 bottomspace">
+		<div class="clearfix">
+			<div class="toolbar pull-left">
+				<div class="btn-group" role="group" aria-label="first group">
+					<button class="btn btn-default" tooltip-animation="true" tooltip="Back" go-back ng-if="mailId!='mails'">
+						<span  class="glyphicon glyphicon-arrow-left"></span>
+					</button>
+					<a class="btn btn-default" href="#/dashboard/enquiry/composemailview" tooltip-animation="true" tooltip="compose" ng-if="mailId!='composemailview'">
+						<span class="glyphicon glyphicon-envelope"></span>
+					</a>
+					<button class="btn btn-default" tooltip-animation="true" tooltip="refresh" ng-if="mailId!='composemailview'" ng-click="refreshpage()">
+						<span class=" glyphicon glyphicon-refresh"></span>
+					</button>
+				</div>
+				
+				<div class="btn-group" role="group" aria-label="Fourth group">
+					<button class="btn btn-default" tooltip="delete" ng-if="mailId=='mailview'">
+						<span class="glyphicon glyphicon-trash"></span>
+					</button>
+					<button class="btn btn-default" tooltip-animation="true" tooltip="Send" ng-click="postData(composemail)" ng-if="mailId=='composemailview'">
+						<span class="glyphicon glyphicon-send"></span>
+					</button>
+				</div>
+			</div>
+			
+			<div class="toolbar pull-right">
+				<div class="btn-group" role="group" aria-label="Sixth group" ng-if="mailId=='mailview'">
+					<a class="btn btn-default" tooltip-animation="true" aria-hidden="true" tooltip="Previous Message" ng-click="prevmail()" >
+						<span class=" glyphicon glyphicon-arrow-left" name="prevmsg" value="prevmsg"></span>
+					</a>
+					<a class="btn btn-default" tooltip-animation="true" aria-hidden="true" tooltip="Next Message" ng-click="nextmail()">
+						<span class="glyphicon glyphicon-arrow-right" name="nextmsg" value="nextmsg"></span>
+					</a>
+				</div>
+				<form class="form-inline">
+					<div class="input-group">
+						<input id="search" type="text" class="form-control" ng-change="searchFilter('subject', searchProp)" ng-model="searchProp" placeholder="search" ng-if="mailId!='composemailview' && mailId!='mailview'"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,75 @@
+<h3 class="col-sm-offset-2 col-sm-9">Submit Template</h3>
+	<form name="submittempForm" class="form-horizontal" role="form" novalidate="novalidate" 	ng-submit="submittempForm.$valid">
+		<div class="form-group">
+			 <label for="template" class="col-sm-2 control-label" name="template" >Template</label>
+				<div class="col-sm-3">
+					<select class="form-control" id="category" name="category" ng-model="addtemplate.category" required ng-options="item as item for item in temp.category">		
+						<option value="">Select Category</option>
+					</select>
+						<span class="help-block" ng-show="submittempForm.category.$dirty && submittempForm.category.$invalid">
+						<span class="text-danger" ng-show="submittempForm.category.$error.required">Category is required.</span>
+						</span>				
+				</div>
+		</div>	
+		<div class="form-group">	
+			<label  for="name" class="col-sm-2 control-label">Template Name</label>
+				<div class="col-sm-9">
+					<input type="text" id="name" class="form-control" name="name" placeholder="Enter Template Name" ng-model="addtemplate.name" required >
+					<span class="text-danger" ng-show="submittempForm.name.$dirty && submittempForm.name.$invalid">
+					<span ng-show="submittempForm.name.$error.required">Name is required.</span>
+					</span>
+				</div>						
+		</div>	
+		<div class="form-group">	
+			<label  for="date" class="col-sm-2 control-label">Date</label>
+			<div class="col-sm-9">
+				 <input type="date" id="date" class="form-control" name="dateInput" ng-model="addtemplate.date" required  placeholder="date">(yyyy/mm/dd)
+			</div>						
+		</div>
+		<div class="form-group">
+			<label for="tempimage" class="col-sm-2 control-label">Template Image</label>
+				<div class="col-sm-9">
+					<input type="file" id="tempImages" ng-file-select ng-multiple="true" accept="image/jpeg,image/png, image/gif" ng-file-change="generateThumb($files)" ng-model="tempImages">
+						<!-- This will show thumbnails & progress of images -->
+						<file-preview url="tempImages"></file-preview>
+						<!-- This button will show if file/s selected -->
+						<button ng-show="tempImages" ng-click="upload(tempImages,path,userDetails,addtemplate.scrible)" type="button">Upload</button>
+						<!-- This hidden input will store image path in array after successful uploading -->
+						<input type="hidden" ng-model="addtemplate.scrible">
+				</div>
+		</div>
+		<div class="form-group">
+			<label for="templatezip" class="col-sm-2 control-label">Template Zip</label>
+				<div class="col-sm-9">
+					<input type="file" id="tempZip" ng-file-select ng-multiple="true" accept="application/zip" ng-file-change="generateThumb($files)" ng-model="tempZip">
+						<!-- This will show thumbnails & progress of images -->
+						<file-preview url="tempZip"></file-preview>
+						<!-- This button will show if file/s selected -->
+						<button ng-show="tempZip" ng-click="upload(tempZip,path,userinfo,reqtemp.scrible)" type="button">Upload</button>
+						<!-- This hidden input will store image path in array after successful uploading -->
+						<input type="hidden" ng-model="addtemplate.scrible">
+				</div>
+		</div>	
+		<div>
+			<input type="hidden" ng-model="addtemplate.user_id">
+		</div>		
+		<div class="form-group">
+			<label class="col-sm-2 control-label">Template Params</label>
+				<div class="col-sm-9">	
+					<div class="checkbox">		
+						<label ng-repeat="x in temp.template_params">
+							<span><input type="checkbox" checklist-model=
+							"addtemplate.template_params" checklist-value="x">{{x}}
+							</span>
+						</label>
+					</div>
+				</div>
+		</div>								
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-9">
+				<button type="submit" class="btn btn-success" ng-disabled="submittempForm.$dirty && submittempForm.$invalid" ng-click="postData(addtemplate)">Submit</button>
+				<button type="reset" class="btn btn-danger">Reset</button>
+			</div>
+		</div>					
+	</form>
+			

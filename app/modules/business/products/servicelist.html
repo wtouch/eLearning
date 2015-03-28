@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col-sm-12">
+	<div class=" bottomspace">
+		<div class="product">
+			<div class="row" ng-repeat="x in services">
+				<div class="col-sm-9">
+					<h3>{{x.business_name}}</h3>
+					<div class="media">
+						<div class="media-left">
+								<span ng-repeat="(key, value) in x.service_image">
+									<img class="media-object" ng-src="{{value.file_name}}"/>
+								</span>
+						</div>
+						<div class="media-body">
+							<h3>{{x.product_service_name}}</h3>
+								<label for="prodDesc"></label>
+									<textarea id="prodDesc" name="prodDesc" class="form-control" rows="3" required ng-minlength="10" ng-maxlength="15" ng-bind-html="x.description">{{x.description}}</textarea>
+						</div>
+					</div>
+				</div>	
+				<div class="col-sm-3">
+					<a href="" class="btn btn-default add-prod">Add Service Photo</a>
+						<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-arrow-up"></span> Push to Top</button>
+							<div class="hot-product">
+								<input type="checkbox"s id="hotProduct"> <label for="hotProduct">Hot Service</label>
+							</div>
+							<div class="edit-btns">	
+								<a href="#">
+									<span class="btn btn-default glyphicon glyphicon-pencil"></span> Edit</a>
+								<a href="#">
+									<span class="btn btn-default glyphicon glyphicon-remove-sign"></span> Delete</a>
+							</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	</div>
+</div>

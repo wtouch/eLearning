@@ -1,0 +1,26 @@
+<div class="modal-content">		
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="modalOptions.close()"><span aria-hidden="true">&times;</span></button>
+	</div>
+	<form name="applyTemplateForm" class="form-horizontal" role="form" novalidate="novalidate" 	ng-submit="applyTemplateForm.$valid">
+		<div class="modal-body">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>Website List</h1>
+						<select id="website_id" name="website_id" class="form-control" ng-change="changeScope(selectDomain)" ng-model="applyTemplate.website_id" ng-options="item.id as item.domain_name for item in modalOptions.websiteList" ng-required="true"> 
+							<option value="">Select Website</option>
+						</select>
+							<span class="help-block" ng-show="applyTemplateForm.website_id.$dirty && applyTemplateForm.website_id.$invalid">
+						<span ng-show="applyTemplateForm.website_id.$error.required" class="text-danger">Please select website.</span>
+						</span>	
+							<input type="hidden" ng-model="applyTemplate.config" ng-init ="applyTemplate.config = modalOptions.tempId"/>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="submit" ng-disabled="applyTemplateForm.$invalid" class="btn btn-primary" ng-click="modalOptions.ok(); modalOptions.updateConfig(applyTemplate)">OK</button>
+		</div>
+	</form>
+</div>			
+
+

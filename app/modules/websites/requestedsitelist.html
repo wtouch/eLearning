@@ -1,0 +1,96 @@
+<h3>Requested Site List</h3>
+	<div class="row">
+		<div class="col-sm-4"> 
+			<div class="bottomspace">
+				<label for="search" class="control-label">Search </label>		
+					<input id="search" type="text" class="form-control" ng-model="searchProp" placeholder="search"/>
+			</div>
+		</div>			 				  
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="id" class="control-label">Sort by Order</label>
+					<select id="id" class="form-control" ng-model="id"> 
+						<option value="">Select Order</option>		<!-- added value & selected attr -->	
+					<option value="-domain_name">Desending</option>
+						<option value="domain_name">Asending</option>  
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="status" class="control-label">Select Status</label>
+					<select id="status" class="form-control" ng-model="status">
+						<option value="" selected>Select Status</option> <!-- add value attribute empty & selected for initial selected option -->
+						<option value="1">Active</option>
+						<option value="0">Deleted</option>   
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="featured" class="control-label">Filter By Featured</label>
+					<select id="featured" class="form-control" ng-model="featured">
+						<option value="" selected>Select Featured</option> <!-- added value & selected attr -->
+						<option value="1" >Featured</option>
+						<option value="0">Not Featured</option> 
+					</select>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="bottomspace">
+				<label for="domain" class="control-label">Select Domain :</label>
+					<select id="domain" class="form-control">            
+						<option value="">All</option>
+						<option value="www.jaidevlandmarks.com">www.jaidevlandmarks.com</option>  
+						<option value="www.hinjewadiproperties.com">www.hinjewadiproperties.com</option>  
+						<option>www.parkstreetwakad.com</option>  
+						<option>www.propertydemand.com</option>  
+						<option>www.parktitanium.com</option>  
+					</select>
+			</div>
+		</div>
+	</div>
+	<div class="table-responsive">		
+		<table class="table table-bordered">
+			<thead>
+				<th>Sr.No.</th>
+				<th>Site Names</th>
+				<th>Start Date</th>
+				<th>Exp Date</th>
+				<th>Manage</th>
+				<th>status</th>
+			</thead>
+				<tbody>
+					<tr ng-repeat="x in website | orderBy:id">
+				    <td>{{((webListCurrentPage - 1) * pageItems) + $index + 1 }}</td>
+					<td>{{x.domain_name}}</td>
+					<td>{{x.registered_date}}</td>
+					<td>{{x.expiry_date}}</td>
+						<td>
+						<div class="btn-toolbar" role="toolbar" aria-label="...">
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-success glyphicon 		glyphicon-plus btn btn-default" tooltip="Add Website">
+							</button>
+							<button type="button" class="glyphicon glyphicon-ok btn btn-default" tooltip="{{dynamicTooltip(x.publish, 'publish', 'unpublish')}}" ng-class="(x.publish==1) ? 'btn btn-info' : 'btn btn-danger'" ng-model="x.publish" ng-change="publish(x.id, x.publish)" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+							</button>
+						</div>
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-primary glyphicon glyphicon-star" ng-click="open('modules/business/viewBusiness.html', x.id=1)" tooltip="Preview">
+							</button>
+							<button type="button" class="btn btn-warning glyphicon glyphicon-pencil" tooltip="Edit">
+							</button>
+							<button type="button" class="glyphicon glyphicon-remove" tooltip="{{dynamicTooltip(x.status, 'Delete', 'Active')}}" ng-class="(x.status==1) ? 'btn btn-success' : 'btn btn-danger'" ng-model="x.status" ng-change="deleted(x.id, x.status)" btn-checkbox btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+							</button>
+						</div>
+					</div>
+                        </td>
+						<td>Active</td>
+					</tr>
+				</tbody>					
+		</table>
+	</div>
+	<div class="text-center">				
+		<pagination total-items="totalRecords" items-per-page="pageItems"  ng-model="websites.reqestSiteCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-change="pageChanged()"></pagination>
+		<pre>Page: {{reqestSiteCurrentPage}} / {{numPages}}</pre>				
+	</div>	
+

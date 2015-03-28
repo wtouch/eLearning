@@ -1,0 +1,13 @@
+<div class="row bottomspace">
+	<div class="col-sm-3">
+		<input id="search" type="text" class="form-control" ng-if="userViews=='userslist'"ng-change="searchFilter('username', searchUser)" ng-model="searchUser" placeholder="Search">
+		<input id="search" type="text" class="form-control" ng-if="userViews=='usersgroup'" ng-change="searchFilter('group_name', searchUserGroup)" ng-model="searchUserGroup" placeholder="Search">
+	</div>
+	
+	<div class="col-sm-9 text-right">
+		<a href="#/dashboard/users/usersgroup" class="btn btn-default">User Group</a>
+		<a href="#/dashboard/users/createusergroup" class="btn btn-default">Create User Group</a>
+		<a href="#/dashboard/users/userslist" class="btn btn-default">Users List</a>
+		<a href="#/dashboard/users/adduser" class="btn btn-default">Add New User</a>
+	</div>
+</div>

@@ -1,0 +1,194 @@
+
+					<div class="form-group">
+						<label  for="contact_person" class="col-sm-3 control-label">Contact Person</label>
+						<div class="col-sm-9">
+							<input type="text" id="contact_person" class="form-control" name="contact_person" placeholder="Contact Person" ng-model="addbusiness.contact_profile.contact_person" required >
+							<span class="help-block" ng-show="addbusinessForm.contact_person.$dirty && addbusinessForm.contact_person.$invalid">
+							<span ng-show="addbusinessForm.contact_person.$error.required" class="text-danger">Contact Person is required.</span>
+							</span>
+						</div>						
+					</div>
+					
+					<div class="form-group" > 
+						<label  for="contact_photo" class="col-sm-3 control-label">Contact Person Photo</label>
+						<div class="col-sm-9">
+							<input type="file" id="contact_photo" name="contact_photo" ng-file-select ng-multiple="false" accept="image/jpeg,image/png, image/gif" ng-file-change="generateThumb($files)" ng-model="contact_photo">
+							<!-- This will show thumbnails & progress of images -->
+								<file-preview url="contact_photo"></file-preview>
+								<!-- This button will show if file/s selected -->
+								<button ng-show="contact_photo" ng-click="upload(contact_photo,path,userinfo, addbusiness.contact_profile.contact_photo)" type="button">Upload</button>
+								<!-- This hidden input will store image path in array after successful uploading -->
+								<input type="hidden" ng-model="addbusiness.contact_profile.contact_photo">
+						</div>
+					</div>
+						
+					<div class="form-group">
+						<label  for="Designation" class="col-sm-3 control-label">Designation/Job Title</label>
+						<div class="col-sm-9">
+							<input type="text" id="Designation" class="form-control" name="Designation" placeholder="Designation/Job Title" ng-model="addbusiness.contact_profile.Designation" required >
+							<span class="help-block" ng-show="addbusinessForm.Designation.$dirty && addbusinessForm.Designation.$invalid">
+							<span ng-show="addbusinessForm.Designation.$error.required" class="text-danger">Designation Required.</span>
+							</span>
+						</div>						
+					</div>
+						
+					<div class="form-group">
+						<label  for="ceo" class="col-sm-3 control-label">CEO Name</label>
+						<div class="col-sm-9">
+							<input type="text" id="ceo" class="form-control" name="ceo" placeholder="CEO Name" ng-model="addbusiness.contact_profile.ceo" required >
+							<span class="help-block" ng-show="addbusinessForm.ceo.$dirty && addbusinessForm.ceo.$invalid">
+							<span ng-show="addbusinessForm.ceo.$error.required" class="text-danger">CEO Name  Required.</span>
+							</span>
+						</div>						
+					</div>
+					
+					<div class="form-group">
+						<label  for="companyname" class="col-sm-3 control-label">Company Name</label>	
+						<div class="col-sm-9">
+							<input type="text" id="companyname" class="form-control" name="companyname" placeholder="Company Name" ng-model="addbusiness.contact_profile.companyname" required >
+							<span class="help-block" ng-show="addbusinessForm.companyname.$dirty && addbusinessForm.companyname.$invalid">
+							<span ng-show="addbusinessForm.companyname.$error.required" class="text-danger">Company Name  Required.</span>
+							</span>
+						</div>						
+					</div>
+						
+					<div class="form-group">
+						<label for="address" class="col-sm-3 control-label">Address</label>
+						<div class="col-sm-9">
+							<textarea type="text" class="form-control" id="address" name="address" ng-model="addbusiness.contact_profile.address" cols="30" rows="3" ng-maxlength="256" placeholder="Enter address"  required></textarea>
+							<p ng-hide="addbusinessForm.address.$error.maxlength">
+								{{ 256 - addbusiness.contact_profile.address.length + " Chars left" }}
+							</p>
+							
+							<span class="help-block" ng-show="addbusinessForm.address.$dirty && addbusinessForm.address.$invalid">
+								<span class="text-danger" ng-show="addbusinessForm.address.$error.maxlength">Sorry You are Exceeding the Limit</span>
+								<span ng-show="addbusinessForm.address.$error.required">Address is required.</span>
+							</span>					
+						</div>
+					</div>	
+					<!-- add combo boxes for city, state, country & add text input for zip code & validation with number max-char 6 -->		
+					
+					<div class="form-group">
+						<label for="Country" class="col-sm-3 control-label">Country</label>
+						<div class="col-sm-9">
+							<select class="form-control" name="Country" id="Country"  ng-model="addbusiness.contact_profile.Country" required ng-change="getState(addbusiness.contact_profile.Country)" ng-options="item.country_name as item.country_name for item in contries">		
+								<option value="">Select Country</option>
+							</select>							
+							<span class="help-block" ng-show="addbusinessForm.Country.$dirty && addbusinessForm.Country.$invalid">
+								<span ng-show="addbusinessForm.Country.$error.required" class="text-danger">Country is required.</span>
+							</span>				
+						</div>
+					</div>	
+											
+					<div class="form-group">
+						<label for="state" class="col-sm-3 control-label">State</label>
+						<div class="col-sm-4">
+							<select class="form-control" name="State" id="State"  ng-model="addbusiness.contact_profile.State" ng-change="getCities(addbusiness.contact_profile.State)" required ng-options="item.state_name as item.state_name for item in states">		
+								<option value="">Select State</option>
+							</select>
+							<span class="help-block" ng-show="addbusinessForm.State.$dirty && addbusinessForm.State.$invalid">
+								<span ng-show="addbusinessForm.State.$error.required" class="text-danger">State is required.</span>
+							</span>				
+						</div>
+												
+						<div class="col-sm-offset-1 col-sm-4">
+							<select class="form-control" name="City" id="City"  ng-model="addbusiness.contact_profile.City" required ng-options="item.city_name as item.city_name for item in cities">		
+								<option value="">Select City</option>
+							</select>
+							<span class="help-block" ng-show="addbusinessForm.City.$dirty && addbusinessForm.City.$invalid">
+								<span ng-show="addbusinessForm.City.$error.required" class="text-danger">City is required.</span>
+							</span>				
+						</div>
+					</div>
+				
+					<div class="form-group">
+						<label for="ZIP_Code" class="col-sm-3 control-label">ZIP Code</label>
+						<div class="col-sm-9">
+							<input type="text" id="ZIP_Code" name="ZIP_Code" class="form-control" ng-model="addbusiness.contact_profile.ZIP_Code" placeholder="Enetr Zip Code" ng-pattern="/^\d{0,9}[0-9]$/" maxlength="6"  ng-minlength="6">
+							<span class="help-block" ng-show="addbusinessForm.ZIP_Code.$dirty && addbusinessForm.ZIP_Code.$invalid">
+								<span ng-show="addbusinessForm.ZIP_Code.$error.pattern && (addbusinessForm.ZIP_Code.$dirty || submitted)" class="text-danger">Enter a valid ZIP Code</span>
+								<span class="text-danger" ng-show="addbusinessForm.ZIP_Code.$error.minlength && (addbusinessForm.ZIP_Code.$dirty || submitted)">Enter Valid Length Of Zip Code.</span>
+							</span>
+						</div>						
+					</div>
+					
+					
+					<div class="form-group">
+						<label for="telephone" class="col-sm-3 control-label">Telephone</label>
+						<div class="col-sm-9">
+							<input type="text" id="telephone" name="telephone" class="form-control" ng-model="addbusiness.contact_profile.telephone" placeholder="Enetr Telephone" ng-pattern="/\d{5}([- ]*)\d{6}/" maxlength="12"  ng-minlength="12">
+							<span class="help-block" ng-show="addbusinessForm.telephone.$dirty && addbusinessForm.telephone.$invalid">
+								<span ng-show="addbusinessForm.telephone.$error.pattern && (addbusinessForm.telephone.$dirty || submitted)" class="text-danger">Enter a valid Telephone</span>
+								<span class="text-danger" ng-show="addbusinessForm.telephone.$error.minlength && (addbusinessForm.telephone.$dirty || submitted)">Enter Valid Length Of Telephone.</span>
+							</span>
+						</div>						
+					</div>
+					
+					<div class="form-group">
+						<label for="mobile" class="col-sm-3 control-label">Mobile/Cell Phone</label>
+						<div class="col-sm-9">
+							<input type="text" id="mobile" name="mobile" class="form-control" ng-model="addbusiness.contact_profile.mobile" placeholder="Enetr Mobile No." ng-pattern="/^[789]\d{9}$/" maxlength="10" required>
+							<span class="help-block" ng-show="addbusinessForm.mobile.$dirty && addbusinessForm.mobile.$invalid">
+								<span ng-show="addbusinessForm.mobile.$error.pattern && (addbusinessForm.mobile.$dirty || submitted)" class="text-danger">Enter a valid Contact Number</span>
+							</span>
+						</div>						
+					</div>
+						
+					<div class="form-group">
+						<label  for="fax" class="col-sm-3 control-label">Fax</label>
+						<div class="col-sm-9">
+							<input type="text" id="fax" class="form-control" name="fax" ng-model="addbusiness.contact_profile.fax" ng-pattern="/^[0-9 \-\s \( \)]*$/" ng-minlength="6" maxlength="6" placeholder="Fax">
+							<span class="help-block" ng-show="addbusinessForm.fax.$dirty && addbusinessForm.fax.$invalid">
+								<span ng-show="addbusinessForm.fax.$error.pattern && (addbusinessForm.fax.$dirty || submitted)" class="text-danger">Enter a valid Fax</span>
+								<span class="text-danger" ng-show="addbusinessForm.fax.$error.minlength && (addbusinessForm.fax.$dirty || submitted)">Enter Valid Length Of Fax.</span>
+							</span>
+						</div>						
+					</div>
+					<div class="form-group">	
+							<label  for="email" class="col-sm-3 control-label">Email</label>
+							<div class="col-sm-9">
+								<input type="Email" class="form-control" id="email" ng-model="addbusiness.contact_profile.email" name="email" placeholder="Enter Email" required >
+								<span class="help-block" ng-show="addbusinessForm.email.$dirty && addbusinessForm.email.$invalid">
+								<span ng-show="addbusinessForm.email.$error.required" class="text-danger">Email is required.</span>
+								<span ng-show="addbusinessForm.email.$error.email" class="text-danger">Invalid Email address.</span>
+								</span>
+							</div>
+						</div>	
+					<div class="form-group">	
+							<label  for="alternate_email" class="col-sm-3 control-label">Alternate Email</label>
+							<div class="col-sm-9">
+								<input type="Email" class="form-control" id="alternate_email" ng-model="addbusiness.contact_profile.alternate_email" name="alternate_email" placeholder="Enter Alternate Email" required >
+								<span class="help-block" ng-show="addbusinessForm.alternate_email.$dirty && addbusinessForm.alternate_email.$invalid">
+								<span ng-show="addbusinessForm.alternate_email.$error.required" class="text-danger">Email is required.</span>
+								<span ng-show="addbusinessForm.alternate_email.$error.email" class="text-danger">Invalid Email address.</span>
+								</span>
+							</div>
+						</div>	
+					
+					<div class="form-group">
+						<label  for="SmallBusinessCatalog" class="col-sm-3 control-label" class="text-danger">Small Business Catalog</label>	
+						<div class="col-sm-9">
+							<input type="text" id="SmallBusinessCatalog" class="form-control" name="SmallBusinessCatalog" ng-model="addbusiness.contact_profile.SmallBusinessCatalog" placeholder="Small Business Catalog" required >
+							<span class="help-block" ng-show="addbusinessForm.SmallBusinessCatalog.$dirty && addbusinessForm.SmallBusinessCatalog.$invalid">
+							<span ng-show="addbusinessForm.SmallBusinessCatalog.$error.required" class="text-danger">Small Business Catalog Required.</span>
+							</span>
+						</div>						
+					</div>
+					<div class="form-group">
+						<label for="contact_website" class="col-sm-3 control-label">Website </label>
+						<div class="col-sm-9">
+							<input type="url" class="form-control" id="contact_website" ng-model="addbusiness.contact_profile.contact_website" name="contact_website" placeholder="Enter Website " required>
+							<span class="help-block" ng-show="addbusinessForm.contact_website.$dirty && 	addbusinessForm.contact_website.$invalid">
+								<span ng-show="addbusinessForm.contact_website.$error.required" class="text-danger">Website  is required.</span>
+								<span ng-show="addbusinessForm.contact_website.$error.url" class="text-danger">Invalid Website.</span>
+							</span>
+							<span>e.g http://www.google.com</span>
+						</div>						
+					</div>	
+					
+					<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9">
+							 <button type="submit" class="btn btn-success"  title="Save" ng-disabled="addbusinessForm.$invalid" ng-click="postData(addbusiness)">Submit</button>
+							</div>
+					</div>
+			

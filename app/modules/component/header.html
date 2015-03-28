@@ -1,0 +1,46 @@
+<header>
+	<div class="container">
+		<div class="row">		
+			<div class="col-sm-2">	
+				<a href="#" title="Welcome To Small Business"><img id="brand" src="img/sb1.jpg" class="img-responsive"></a>	
+			</div>			
+			<div class="col-sm-7">
+				<h1 class="text-center">Welcome To My Business</h1>
+				<h2 class="text-center">{{appConfig.subTitle}}</h2>
+			</div>		
+			<div class="col-sm-3">
+				<div ng-show="!userDetails.username">
+				<a  class="btn btn-primary" href="#login">Login</a> | 
+				<a  class="btn btn-primary" href="#register">Register</a>
+				</div>
+				<div class="user-dropdown" ng-show="userDetails.username" dropdown>
+					<a class="btn btn-link">
+						Welcome {{userDetails.name}}
+					</a>
+					<span dropdown-toggle class="user-img">
+						<img ng-hide="userDetails.user_img" src="img/user1.png" class="img-responsive img-circle pull-right">
+						<img ng-if="userDetails.user_img.file_name" ng-src="{{appConfig.assetPath+'/'+userDetails.user_img.file_name}}" class="img-responsive img-circle pull-right">
+					</span>
+					<ul class="dropdown-menu " role="menu">
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#/editprofile">
+								<span class="glyphicon glyphicon-pencil"></span> Edit Profile
+							</a>
+						</li>
+						<li role="presentation">
+							<a role="menuitem" tabindex="-1" href="#/changepass">
+								<span class="glyphicon glyphicon-pencil"></span> Change Password
+							</a>
+						</li>
+						<li role="presentation">
+								<a role="menuitem" tabindex="-1" href="#/logout">
+								<span class="glyphicon glyphicon-off"></span> Sign Out
+								</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
