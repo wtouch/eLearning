@@ -7,7 +7,7 @@ define(['app'], function (app) {
 
     // This is controller for this view
 	var questionsController = function ($scope,$rootScope,$injector,dataService,$location, $cookieStore, $cookies,$routeParams) {
-		
+		$scope.alerts = [{type: "success", msg: "Record inserted successfully!"}];
 		$scope.testViews = $routeParams.views;
 		if($scope.testViews) $rootScope.breadcrumbs.breadcrumbs[$rootScope.breadcrumbs.breadcrumbs.length - 1].label = dataService.capitalize($scope.testViews);
 		
