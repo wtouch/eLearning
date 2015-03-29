@@ -2,8 +2,18 @@
 	<div class="col-sm-12">
 		<div class="main-content">
 			<ng-include src="'modules/tests/toolbar.html'"></ng-include>
-			<h2 ng-if="!testViews">Test view</h2>
-			<h2 ng-if="testViews">Test other views !</h2>
+			
+			<ng-include ng-if="!testViews" src="'modules/tests/testslanding.html'"></ng-include>
+			
+			<ng-include ng-if="testViews=='questions'" src="'modules/tests/questions/questions.html'"></ng-include>
+			<ng-include ng-if="testViews=='questiongroups'" src="'modules/tests/questions/questiongroups.html'"></ng-include>
+			
+			<ng-include ng-if="testViews=='testgroups'" src="'modules/tests/tests/testgroups.html'"></ng-include>
+			
+			<ng-include ng-if="testViews=='tests'" src="'modules/tests/tests/tests.html'"></ng-include>
+			
+			<ng-include ng-if="testViews=='createtest'" src="'modules/tests/tests/createtest.html'"></ng-include>
+			
 		</div>
 	</div>
 </div>

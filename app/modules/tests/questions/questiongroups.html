@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-sm-3">
+		<div class="sidebar">
+			<ul class="nav nav-pills nav-stacked">
+				<li ng-class="{active: formPart=='levels'}"><a ng-click="showFormPart('levels')">
+				Manage Levels</a></li>
+				<li ng-class="{active: formPart=='subjects'}"><a ng-click="showFormPart('subjects')">Manage Subjects</a></li>
+				<li ng-class="{active: formPart=='topics'}"><a ng-click="showFormPart('topics')">Manage Topics</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<ng-include ng-if="formPart=='levels'" src="'modules/tests/questions/groups/levels.html'"></ng-include>
+		<ng-include ng-if="formPart=='subjects'" src="'modules/tests/questions/groups/subjects.html'"></ng-include>
+		<ng-include ng-if="formPart=='topics'" src="'modules/tests/questions/groups/topics.html'"></ng-include>
+		
+	</div>
+</div>

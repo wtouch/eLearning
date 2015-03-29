@@ -1,0 +1,46 @@
+<div class="text-right">
+	<button ng-if="!level" type="button" class="btn btn-default btn-primary" title="next" ng-click="update(testConfig.levels)">Save Details</button>
+	<button ng-if="!level" class="btn btn-default btn-info" ng-click="showForm('level', 'levels')">Add Level</button>
+</div>
+
+<form name="levelForm" ng-if="level" role="form" class="form-horizontal" ng-submit="levelForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
+	<div class="form-group" >
+		<div class="col-sm-8 col-sm-offset-2">
+			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(levels, testConfig.levels, 'levels', 'level_id')" ng-disabled="levelForm.$invalid">Add Level</button>
+			<button ng-if="level && headingDisabled" class="btn btn-default btn-info" ng-click="addToObject(levels, testConfig.levels, 'levels', 'level_id')">Edit Details</button>
+			<button ng-if="level" class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="level_name" class="col-sm-2 control-label" name="level_name" >Level Name</label>
+		<div class="col-sm-8">
+			<input type="hidden" class="form-control" name="level_name" id="level_name" ng-model="levels.level_id">
+			<input type="text" class="form-control" name="level_name" id="level_name" ng-model="levels.level_name" required>
+			<span class="help-block" ng-show="levelForm.level_name.$dirty && levelForm.level_name.$invalid">
+			<span ng-show="levelForm.level_name.$error.required" class="text-danger">Sender Country is required.</span>
+			</span>				
+		</div>
+	</div>	
+</form>
+<div class="row">
+	<div class="col-sm-12">
+		<table class="table table-bordered table-responsive " >
+			<tr>
+				<th>Level Id</th>
+				<th>Level Name</th>
+				<th>Manage Level</th>
+			</tr>
+			<tr ng-repeat="level in testConfig.levels">
+				<td>{{level.level_id}}</td>
+				<td>
+					{{level.level_name}}
+				</td>
+				<td>
+				<button class="btn btn-success glyphicon glyphicon-pencil" ng-click="editObject(key,level.level_name, level); showForm('level')" tooltip="Edit Details"></button>
+				<button class="btn btn-warning glyphicon glyphicon-trash" ng-click="removeObject(key,level.level_name)" tooltip="Remove"></button>			
+				</td>
+				
+			</tr>
+		</table>
+	</div>
+</div>

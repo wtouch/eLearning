@@ -7,11 +7,78 @@ define(['app'], function (app) {
 
     // This is controller for this view
 	var testsController = function ($scope,$rootScope,$injector,dataService,$location, $cookieStore, $cookies,$routeParams) {
+		
 		$scope.testViews = $routeParams.views;
 		if($scope.testViews) $rootScope.breadcrumbs.breadcrumbs[$rootScope.breadcrumbs.breadcrumbs.length - 1].label = dataService.capitalize($scope.testViews);
 		
 		
-		console.log("test controller");
+		
+		$scope.showFormPart = function(formPart){
+			$scope.formPart = formPart;
+		};
+		$scope.closeAlert = function(index) {
+			$scope.alerts.splice(index, 1);
+		};
+		$scope.testConfig = dataService.config.tests;
+		
+		$scope.addToObject = function(data, object, resetObj, id){
+			data[id] = object.length + 1;
+			var dtlObj = JSON.stringify(data);
+			object.push(JSON.parse(dtlObj));
+		}
+		
+		$scope.removeObject = function(key, object){
+			delete object[key];
+		}
+		$scope.editObject = function(key, object, FormObj){
+			var dtlObj = JSON.stringify(object[key]);
+			FormObj['desc'] = JSON.parse(dtlObj);
+			FormObj['heading'] = key;
+		}
+		
+		$scope.showForm = function(obj){
+			$scope[obj] = !$scope[obj];
+		}
+		var questions = function(){
+			$scope.formPart = 'addquestion';
+			console.log($scope.formPart);
+		}
+		var questiongroups = function(){
+			$scope.formPart = 'levels';
+			
+		}
+		var testgroups = function(){
+			$scope.formPart = 'addtestgroup';
+			
+		}
+		var tests = function(){
+			$scope.formPart = 'tests';
+			
+		}
+		var createtest = function(){
+			$scope.formPart = 'createtest';
+			
+		}
+		
+		switch($scope.testViews) {
+			case 'questions':
+				questions();
+				break;
+			case 'questiongroups':
+				questiongroups();
+				break;
+			case 'testgroups':
+				testgroups();
+				break;
+			case 'tests':
+				tests();
+				break;
+			case 'createtest':
+				createtest();
+				break;
+			default:
+				questions();
+		}
 		
 	}
 	// Inject controller's dependencies

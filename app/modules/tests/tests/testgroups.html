@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="col-sm-3">
+		<div class="sidebar">
+			<ul class="nav nav-pills nav-stacked">
+				<li ng-class="{active: formPart=='addtestgroup'}"><a ng-click="showFormPart('addtestgroup')">
+				Add Test Group</a></li>
+				<li ng-class="{active: formPart=='testgroups'}"><a ng-click="showFormPart('testgroups')">View Test Groups</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<ng-include ng-if="formPart=='addtestgroup'" src="'modules/tests/tests/groups/addtestgroup.html'"></ng-include>
+		
+	</div>
+</div>

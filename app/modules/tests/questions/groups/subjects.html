@@ -1,0 +1,62 @@
+<div class="text-right">
+	<button ng-if="!level" type="button" class="btn btn-default btn-primary" title="next" ng-click="update(testConfig.subjects)">Save Details</button>
+	<button ng-if="!level" class="btn btn-default btn-info" ng-click="showForm('level', 'subjects')">Add Level</button>
+</div>
+
+<form name="levelForm" ng-if="level" role="form" class="form-horizontal" ng-submit="levelForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
+	<div class="form-group" >{{level}}
+		<div class="col-sm-8 col-sm-offset-2">
+			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')" ng-disabled="levelForm.$invalid">Add Level</button>
+			<button ng-if="level && headingDisabled" class="btn btn-default btn-info" ng-click="addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')">Edit Details</button>
+			<button ng-if="level" class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="subject_name" class="col-sm-2 control-label" name="subject_name" >Select Level</label>
+		<div class="col-sm-8">
+			<select class="form-control" ng-model="subjects.level_id" ng-options="level.level_id as level.level_name for level in testConfig.levels">
+				<option value="">Select Level</option>
+			</select>		
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="subject_name" class="col-sm-2 control-label" name="subject_name" >Level Name</label>
+		<div class="col-sm-8">
+			<input type="hidden" class="form-control" name="subject_name" id="subject_name"  ng-model="subjects.subject_id">
+			<input type="text" class="form-control" name="subject_name" id="subject_name"  ng-model="subjects.subject_name" required>
+			<span class="help-block" ng-show="levelForm.subject_name.$dirty && levelForm.subject_name.$invalid">
+			<span ng-show="levelForm.subject_name.$error.required" class="text-danger">Sender Country is required.</span>
+			</span>				
+		</div>
+	</div>	
+</form>
+<div class="row">
+	<div class="col-sm-3 bottomspace">
+		<select class="form-control" ng-model="levelFltr" ng-options="level.level_id as level.subject_name for level in testConfig.subjects">
+			<option value="">Select Level</option>
+		</select>
+	</div>
+	
+	<div class="col-sm-12">
+		<table class="table table-bordered">
+			<tr>
+				<th>Subjects Id</th>
+				<th>Level Id</th>
+				<th>Subjects Name</th>
+				<th>Manage Subjects</th>
+			</tr>
+			<tr ng-repeat="subject in testConfig.subjects | filter: {level_id : levelFltr}">
+				<td>{{subject.subject_id}}</td>
+				<td>{{subject.level_id}}</td>
+				<td>
+					<div class="pull-left">{{subject.subject_name}}
+					</div>
+				</td>
+				<td>
+				<button class="btn btn-success glyphicon glyphicon-pencil" ng-click="editObject(key,businessData.infrastructure, infrastructure); showForm('infra')" tooltip="Edit Details"></button>
+				<button class="btn btn-warning glyphicon glyphicon-trash" ng-click="removeObject(key,businessData.infrastructure)" tooltip="Remove"></button>			
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
