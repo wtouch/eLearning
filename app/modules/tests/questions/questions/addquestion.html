@@ -42,10 +42,17 @@
 		</div>
 	</div>
 	<ng-include ng-if="question.type=='multiplechoice'" src="'modules/tests/questions/questions/questiontypes/multiplechoice.html'"></ng-include>
+    <ng-include ng-if="question.type=='truefalse'" src="'modules/tests/questions/questions/questiontypes/truefalse.html'"></ng-include>
+    <ng-include ng-if="question.type=='multipleresponse'" src="'modules/tests/questions/questions/questiontypes/multipleresponse.html'"></ng-include>
+    <ng-include ng-if="question.type=='fillintheblank'" src="'modules/tests/questions/questions/questiontypes/fillintheblank.html'"></ng-include>
+    <ng-include ng-if="question.type=='maching'" src="'modules/tests/questions/questions/questiontypes/maching.html'"></ng-include>
+    <ng-include ng-if="question.type=='wordbank'" src="'modules/tests/questions/questions/questiontypes/wordbank.html'"></ng-include>
+    <ng-include ng-if="question.type=='shortessay'" src="'modules/tests/questions/questions/questiontypes/shortessay.html'"></ng-include>
+    <ng-include ng-if="question.type=='clickmap'" src="'modules/tests/questions/questions/questiontypes/clickmap.html'"></ng-include>
 
 	<div class="form-group" >
 		<div class="col-sm-8 col-sm-offset-2">
-			<button class="btn btn-default btn-primary" ng-click="addToObject(testgroup, testgroups, 'levels', 'level_id')" ng-disabled="testGroupForm.$invalid">Add Group</button>
+			<button class="btn btn-default btn-primary" ng-click="addToObject(testgroup, testgroups, 'levels', 'level_id')" ng-disabled="testGroupForm.$invalid">Add Question</button>
 			<button class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
 		</div>
 	</div>
