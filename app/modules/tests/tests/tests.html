@@ -1,1 +1,30 @@
 <h2>View List of tests!</h2>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+  <thead>
+      <th>sr.no</th>
+      <th>test name</th>
+      <th>test points</th>
+      <th>status</th>
+      <th>manage</th>
+</thead>
+      <tbody>
+          <tr>
+          <td>1</td>
+          <td>addition</td>
+          <td>100</td>
+          <td>solved</td>
+          <td>
+					<div class="btn-group" role="group" aria-label="first group">
+						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</a>
+						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+							<span class="glyphicon glyphicon-remove"></span>
+						</button>
+					</div>
+				</td>
+          </tr>
+      </tbody>
+</table>
+</div>
