@@ -1,1 +1,62 @@
-<h2>Add Question</h2>
+<h3 class="border-bottom">Add Question</h2>
+<form name="testGroupForm" role="form" class="form-horizontal" ng-submit="testGroupForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Level</label>
+		<div class="col-sm-8">
+			<select class="form-control" ng-model="question.level" ng-options="level.level_id as level.level_name for level in testConfig.levels" required>
+				<option value="">Select Level</option>
+			</select>		
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Subject</label>
+		<div class="col-sm-8">
+			<select class="form-control" ng-model="question.subject" ng-options="subject.subject_id as subject.subject_name for subject in testConfig.subjects | filter : {level_id : topics.level_id}" required>
+				<option value="">Select Subject</option>
+			</select>	
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Topic</label>
+		<div class="col-sm-8">
+			<select class="form-control" ng-model="question.topic" ng-options="topic.topic_id as topic.topic_name for topic in testConfig.topics | filter : {level_id : topics.subject_id, level_id : topics.level_id}" required>
+				<option value="">Select Topic</option>
+			</select>	
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Question Type</label>
+		<div class="col-sm-8">
+			<select class="form-control" ng-model="question.type" ng-options="type.id as type.type_name for type in testConfig.question_type" required>
+				<option value="">Select Question Type</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-3 control-label">Question</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" name="group_name" id="group_name" ng-model="question.question" required>	
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-3 control-label">Answer</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" name="group_name" id="group_name" ng-model="question.answer" required>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-3 control-label">Answer</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" name="group_name" id="group_name" ng-model="question.answer" required>
+		</div>
+	</div>
+	
+	
+	<div class="form-group" >
+		<div class="col-sm-8 col-sm-offset-2">
+			<button class="btn btn-default btn-primary" ng-click="addToObject(testgroup, testgroups, 'levels', 'level_id')" ng-disabled="testGroupForm.$invalid">Add Group</button>
+			<button class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
+		</div>
+	</div>
+</form>
