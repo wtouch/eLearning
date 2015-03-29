@@ -39,6 +39,10 @@ define(['app'], function (app) {
 		$scope.showForm = function(obj){
 			$scope[obj] = !$scope[obj];
 		}
+		$scope.consoleThis = function(data){
+			console.log(data);
+		}
+		
 		var questions = function(){
 			$scope.formPart = 'addquestion';
 			console.log($scope.formPart);

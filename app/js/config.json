@@ -38,31 +38,16 @@
 			
 			"test_group_config" : {"retake": "Retake Test", "timer": "Set Timer", "questions" : "Set no of Quesions", "single_topic ": "Single Topic", "multiple_topics" : "Multiple Topics", "select_level" : "Select Level", "select_subject" : "Select Subject", "time_period":"Set Time Period"},
 			
-			"question_type" : [{
-				"id" : "1",
-				"type_name":"true false"
-			},{
-				"id" : "1",
-				"type_name":"multiple choice"
-			},{
-				"id" : "1",
-				"type_name":"multiple response"
-			},{
-				"id" : "1",
-				"type_name":"fill in the blank"
-			},{
-				"id" : "1",
-				"type_name":"matching"
-			},{
-				"id" : "1",
-				"type_name":"word bank"
-			},{
-				"id" : "1",
-				"type_name":"short essay(brief answer)"
-			},{
-				"id" : "1",
-				"type_name":"Click map"
-			}]
+			"question_type" : [
+				{"id" : "1",	"type_name":"true false"},
+				{"id" : "2","type_name":"multiple choice"},
+				{"id" : "3","type_name":"multiple response"},
+				{"id" : "4","type_name":"fill in the blank"},
+				{"id" : "5","type_name":"matching"},
+				{"id" : "6","type_name":"word bank"	},
+				{"id" : "7","type_name":"short essay(brief answer)"},
+				{"id" : "8","type_name":"Click map"}],
+			"test_groups" : [{"id":"1", "group_config": { "single_topic ": true, "timer": true, "time_period": true, "select_subject": true, "select_level": true, "retake": true, "questions": true }, "group_name": "Unit Test" }, {"id":"2", "group_config": { "single_topic ": true, "timer": false, "time_period": false, "select_subject": true, "select_level": true, "retake": true, "questions": true }, "group_name": "Practice Test" }]
 		},
 		"manage_user" : {
 				
