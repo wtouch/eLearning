@@ -4,7 +4,7 @@
 </div>
 
 <form name="levelForm" ng-if="level" role="form" class="form-horizontal" ng-submit="levelForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
-	<div class="form-group" >{{level}}
+	<div class="form-group" >
 		<div class="col-sm-8 col-sm-offset-2">
 			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')" ng-disabled="levelForm.$invalid">Add Level</button>
 			<button ng-if="level && headingDisabled" class="btn btn-default btn-info" ng-click="addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')">Edit Details</button>
@@ -40,17 +40,16 @@
 	<div class="col-sm-12">
 		<table class="table table-bordered">
 			<tr>
-				<th>Subjects Id</th>
-				<th>Level Id</th>
-				<th>Subjects Name</th>
-				<th>Manage Subjects</th>
+				<th>Id</th>
+				<th>Group Name</th>
+				<th>Group Settings</th>
+				<th>Manage</th>
 			</tr>
-			<tr ng-repeat="subject in testConfig.subjects | filter: {level_id : levelFltr}">
-				<td>{{subject.subject_id}}</td>
-				<td>{{subject.level_id}}</td>
+			<tr ng-repeat="x in testConfig.test_groups">
+				<td>{{x.id}}</td>
+				<td>{{x.group_name}}</td>
 				<td>
-					<div class="pull-left">{{subject.subject_name}}
-					</div>
+					<p ng-repeat="(key, val) in x.group_config">{{key}}</p>
 				</td>
 				<td>
 				<button class="btn btn-success glyphicon glyphicon-pencil" ng-click="editObject(key,businessData.infrastructure, infrastructure); showForm('infra')" tooltip="Edit Details"></button>
