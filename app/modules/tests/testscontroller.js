@@ -24,7 +24,7 @@ define(['app'], function (app) {
 		$scope.addToObject = function(data, object, resetObj, id){
 			data[id] = object.length + 1;
 			var dtlObj = JSON.stringify(data);
-			object.push(JSON.parse(dtlObj));
+			if(angular.isArray(object)) object.push(JSON.parse(dtlObj));
 		}
 		
 		$scope.removeObject = function(key, object){
@@ -49,7 +49,8 @@ define(['app'], function (app) {
 		}
 		var testgroups = function(){
 			$scope.formPart = 'addtestgroup';
-			
+			$scope.testgroup = {group_config:{}};
+			$scope.testgroups = {};
 		}
 		var tests = function(){
 			$scope.formPart = 'tests';
