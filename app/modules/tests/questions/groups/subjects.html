@@ -1,12 +1,12 @@
 <div class="text-right">
 	<button ng-if="!level" type="button" class="btn btn-default btn-primary" title="next" ng-click="update(testConfig.subjects)">Save Details</button>
-	<button ng-if="!level" class="btn btn-default btn-info" ng-click="showForm('level', 'subjects')">Add Level</button>
+	<button ng-if="!level" class="btn btn-default btn-info" ng-click="showForm('level', 'subjects')">Add Subject</button>
 </div>
 
 <form name="levelForm" ng-if="level" role="form" class="form-horizontal" ng-submit="levelForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
 	<div class="form-group" >{{level}}
 		<div class="col-sm-8 col-sm-offset-2">
-			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')" ng-disabled="levelForm.$invalid">Add Level</button>
+			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')" ng-disabled="levelForm.$invalid">Add Subject</button>
 			<button ng-if="level && headingDisabled" class="btn btn-default btn-info" ng-click="addToObject(subjects, testConfig.subjects, 'subjects', 'subject_id')">Edit Details</button>
 			<button ng-if="level" class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
 		</div>
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="subject_name" class="col-sm-2 control-label" name="subject_name" >Level Name</label>
+		<label for="subject_name" class="col-sm-2 control-label" name="subject_name" >Subject Name</label>
 		<div class="col-sm-8">
 			<input type="hidden" class="form-control" name="subject_name" id="subject_name"  ng-model="subjects.subject_id">
 			<input type="text" class="form-control" name="subject_name" id="subject_name"  ng-model="subjects.subject_name" required>
@@ -33,7 +33,7 @@
 <div class="row">
 	<div class="col-sm-3 bottomspace">
 		<select class="form-control" ng-model="levelFltr" ng-options="level.level_id as level.subject_name for level in testConfig.subjects">
-			<option value="">Select Level</option>
+			<option value="">Select Subject</option>
 		</select>
 	</div>
 	

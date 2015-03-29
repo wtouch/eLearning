@@ -1,13 +1,13 @@
 
 <div class="text-right">
 	<button ng-if="!level" type="button" class="btn btn-default btn-primary" title="next" ng-click="update(testConfig.topics)">Save Details</button>
-	<button ng-if="!level" class="btn btn-default btn-info" ng-click="showForm('level', 'topics')">Add Level</button>
+	<button ng-if="!level" class="btn btn-default btn-info" ng-click="showForm('level', 'topics')">Add Topic</button>
 </div>
 
 <form name="levelForm" ng-if="level" role="form" class="form-horizontal" ng-submit="levelForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
 	<div class="form-group" >
 		<div class="col-sm-8 col-sm-offset-2">
-			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(topics, testConfig.topics, 'topics', 'topic_id')" ng-disabled="levelForm.$invalid">Add Level</button>
+			<button ng-if="level && !headingDisabled" class="btn btn-default btn-primary" ng-click=	"addToObject(topics, testConfig.topics, 'topics', 'topic_id')" ng-disabled="levelForm.$invalid">Add Topic</button>
 			<button ng-if="level && headingDisabled" class="btn btn-default btn-info" ng-click="addToObject(topics, testConfig.topics, 'topics', 'topic_id')">Edit Details</button>
 			<button ng-if="level" class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
 		</div>
@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Level Name</label>
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Topic Name</label>
 		<div class="col-sm-8">
 			<input type="hidden" class="form-control" name="topic_name" id="topic_name"  ng-model="topics.topic_id">
 			<input type="text" class="form-control" name="topic_name" id="topic_name"  ng-model="topics.topic_name" required>
