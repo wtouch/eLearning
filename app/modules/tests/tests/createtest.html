@@ -1,1 +1,81 @@
-<h2>Test other views !</h2>
+<h3 class="border-bottom">Create Test</h3>
+<form name="testGroupForm" role="form" class="form-horizontal" ng-submit="testGroupForm.$valid" novalidate="novalidate"> <!-- <span ng-show="userDetails.user_group"></span>{{userDetails.group_name}} -->
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Test Name</label>
+		<div class="col-sm-9">
+			<input type="text" class="form-control" name="group_name" id="group_name" ng-model="test.name" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Test Group</label>
+		<div class="col-sm-9">
+			<select class="form-control" ng-model="testconfig" ng-options="x as x.group_name for x in testConfig.test_groups" required>
+				<option value="">Select Test Group</option>
+			</select>		
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Level</label>
+		<div class="col-sm-3">
+			<select class="form-control" ng-model="question.topic" ng-options="topic.level_id as topic.level_name for topic in testConfig.levels" required>
+				<option value="">Select Level</option>
+			</select>	
+		</div>
+		
+		<div class="col-sm-3">
+			<select class="form-control" ng-model="question.topic" ng-options="topic.subject_id as topic.subject_name for topic in testConfig.subjects | filter : {level_id : topics.subject_id}" required>
+				<option value="">Select Subject</option>
+			</select>	
+		</div>
+		
+		<div class="col-sm-3">
+			<select class="form-control" ng-model="question.topic" ng-options="topic.topic_id as topic.topic_name for topic in testConfig.topics | filter : {level_id : topics.subject_id, level_id : topics.level_id}" required>
+				<option value="">Select Topic</option>
+			</select>	
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">No of Questions</label>
+		<div class="col-sm-4">
+			<input type="text" class="form-control" name="group_name" id="group_name" ng-model="test.name" required>
+		</div>
+		<label class="col-sm-2 control-label">Time Limit</label>
+		<div class="col-sm-3">
+			<input type="time" class="form-control" name="group_name" id="group_name" ng-model="test.name" required>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="topic_name" class="col-sm-2 control-label" name="topic_name" >Select Question Type</label>
+		<div class="col-sm-4">
+			<select class="form-control" ng-model="question.type" ng-options="type.id as type.type_name for type in testConfig.question_type" required>
+				<option value="">Select Question Type</option>
+			</select>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Select Questions</label>
+		<div class="col-sm-9">
+			<select class="form-control" multiple ng-model="question.type" required>
+				<option value="" readonly>Select Question Type</option>
+				<option value="1">Question no one!</option>
+				<option value="2">Question no two!</option>
+				<option value="3">Question no three!</option>
+				<option value="4">Question no four!</option>
+				<option value="5">Question no five!</option>
+				<option value="6">Question no six!</option>
+				<option value="7">Question no seven!</option>
+			</select>
+		</div>
+	</div>
+	
+	<ng-include ng-if="question.type=='multiplechoice'" src="'modules/tests/questions/questions/questiontypes/multiplechoice.html'"></ng-include>
+
+	<div class="form-group" >
+		<div class="col-sm-9 col-sm-offset-2">
+			<button class="btn btn-default btn-primary" ng-click="addToObject(testgroup, testgroups, 'levels', 'level_id')" ng-disabled="testGroupForm.$invalid">Add Group</button>
+			<button class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
+		</div>
+	</div>
+</form>
