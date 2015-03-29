@@ -4,11 +4,52 @@
 			<textarea type="text" class="form-control" name="group_name" id="group_name" ng-model="question.question" required></textarea>
 		</div>
         <div class="col-sm-2"><input type="file"></div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Enter The Choice</label>
-		<div class="col-sm-8">
-			<input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer">
-            <input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer">
-		</div>
-	</div>
+</div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Enter The Choice</label>
+    <div class"col-sm-8 table-responsive">
+        <table class="table-bordered table-striped">
+            <thead>
+                <th>No.</th>
+                <th>Correct</th>
+                <th>Choices</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A.</td>
+                    <td><input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer"></td>
+                    <td>TRUE</td>
+                </tr>
+                <tr>
+                    <td>B.</td>
+                    <td><input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer"></td>
+                    <td>False</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="form-group">
+<label class="col-sm-2 control-label">Set Feedback and Points</label>
+<div class"col-sm-8 table-responsive">
+        <table class="table-bordered table-striped">
+            <thead>
+                <th></th>
+                <th>Feedback</th>
+                <th>Points</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Correct</td>
+                    <td>Correct<button>More...</button></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Incorrect</td>
+                    <td>Incorrect<button>More...</button></td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
