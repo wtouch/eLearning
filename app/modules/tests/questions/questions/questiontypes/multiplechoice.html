@@ -1,14 +1,14 @@
 <div class="form-group">
 		<label class="col-sm-2 control-label">Enter the Question</label>
-		<div class="col-sm-8">
+		<div class="col-sm-7">
 			<textarea type="text" class="form-control" name="group_name" id="group_name" ng-model="question.question" required></textarea>
 		</div>
-        <div class="col-sm-2"><input type="file"></div>
+        <div class="col-sm-3"><button class="btn btn-default">Add Media</button></div>
 </div>
 <div class="form-group">
     <label class="col-sm-2 control-label">Enter The Choice</label>
-    <div class"col-sm-8 table-responsive">
-        <table class="table-bordered table-striped">
+    <div class="col-sm-9 table-responsive">
+        <table class="table">
             <thead>
                 <th>No.</th>
                 <th>Correct</th>
@@ -17,23 +17,39 @@
             <tbody>
                 <tr>
                     <td>A.</td>
-                    <td><input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer"></td>
-                    <td>TRUE</td>
+                    <td>
+						<input type="radio" name="ans">
+					</td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
                 </tr>
                 <tr>
                     <td>B.</td>
-                    <td><input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer"></td>
-                    <td>False</td>
+                    <td>
+						<input type="radio" name="ans">
+					</td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
                 </tr>
                 <tr>
                     <td>B.</td>
-                    <td><input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer"></td>
-                    <td>False</td>
+                    <td>
+						<input type="radio" name="ans">
+					</td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
                 </tr>
                 <tr>
                     <td>B.</td>
-                    <td><input type="radio" class="form-control" name="group_name" id="group_name" ng-model="question.answer"></td>
-                    <td>False</td>
+                    <td>
+						<input type="radio" name="ans">
+					</td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
                 </tr>
             </tbody>
         </table>
@@ -41,8 +57,8 @@
 </div>
 <div class="form-group">
 <label class="col-sm-2 control-label">Set Feedback and Points</label>
-<div class"col-sm-8 table-responsive">
-        <table class="table-bordered table-striped">
+<div class="col-sm-9 table-responsive">
+        <table class="table">
             <thead>
                 <th></th>
                 <th>Feedback</th>
@@ -51,13 +67,21 @@
             <tbody>
                 <tr>
                     <td>Correct</td>
-                    <td>Correct<button>More...</button></td>
-                    <td><input type="number"></td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
                 </tr>
                 <tr>
                     <td>Incorrect</td>
-                    <td>Incorrect<button>More...</button></td>
-                    <td><input type="number"></td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
+                    <td>
+						<input type="text" class="form-control">
+					</td>
                 </tr>
             </tbody>
         </table>
