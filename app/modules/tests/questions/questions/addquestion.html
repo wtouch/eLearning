@@ -30,26 +30,14 @@
 			</select>
 		</div>
 	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Question</label>
-		<div class="col-sm-8">
-			<textarea type="text" class="form-control" name="group_name" id="group_name" ng-model="question.question" required></textarea>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Answer</label>
-		<div class="col-sm-8">
-			<input type="text" class="form-control" name="group_name" id="group_name" ng-model="question.answer" required>
-		</div>
-	</div>
-	<ng-include ng-if="question.type=='multiplechoice'" src="'modules/tests/questions/questions/questiontypes/multiplechoice.html'"></ng-include>
-    <ng-include ng-if="question.type=='truefalse'" src="'modules/tests/questions/questions/questiontypes/truefalse.html'"></ng-include>
-    <ng-include ng-if="question.type=='multipleresponse'" src="'modules/tests/questions/questions/questiontypes/multipleresponse.html'"></ng-include>
-    <ng-include ng-if="question.type=='fillintheblank'" src="'modules/tests/questions/questions/questiontypes/fillintheblank.html'"></ng-include>
-    <ng-include ng-if="question.type=='maching'" src="'modules/tests/questions/questions/questiontypes/maching.html'"></ng-include>
-    <ng-include ng-if="question.type=='wordbank'" src="'modules/tests/questions/questions/questiontypes/wordbank.html'"></ng-include>
-    <ng-include ng-if="question.type=='shortessay'" src="'modules/tests/questions/questions/questiontypes/shortessay.html'"></ng-include>
-    <ng-include ng-if="question.type=='clickmap'" src="'modules/tests/questions/questions/questiontypes/clickmap.html'"></ng-include>
+	<ng-include ng-if="question.type=='2'" src="'modules/tests/questions/questions/questiontypes/multiplechoice.html'"></ng-include>
+    <ng-include ng-if="question.type=='1'" src="'modules/tests/questions/questions/questiontypes/truefalse.html'"></ng-include>
+    <ng-include ng-if="question.type=='3'" src="'modules/tests/questions/questions/questiontypes/multipleresponse.html'"></ng-include>
+    <ng-include ng-if="question.type=='4'" src="'modules/tests/questions/questions/questiontypes/fillintheblank.html'"></ng-include>
+    <ng-include ng-if="question.type=='5'" src="'modules/tests/questions/questions/questiontypes/maching.html'"></ng-include>
+    <ng-include ng-if="question.type=='6'" src="'modules/tests/questions/questions/questiontypes/wordbank.html'"></ng-include>
+    <ng-include ng-if="question.type=='7'" src="'modules/tests/questions/questions/questiontypes/shortessay.html'"></ng-include>
+    <ng-include ng-if="question.type=='8'" src="'modules/tests/questions/questions/questiontypes/clickmap.html'"></ng-include>
 
 	<div class="form-group" >
 		<div class="col-sm-8 col-sm-offset-2">
