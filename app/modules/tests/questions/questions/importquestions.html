@@ -1,1 +1,28 @@
-<h2>Import Questions</h2>
+<h3 class="border-bottom">Import Questions</h3>
+<form name="importQuestionsForm" role="form" class="form-horizontal" ng-submit="importQuestionsForm.$valid" novalidate="novalidate">
+	<small>
+		<strong>Format of CVS file: </strong><br>
+		<pre><"Question","Question_Type","Correct_Answer", "Option1", "option2", "option3", "option4", "option5", "Correct_Feedback", "incorrect_Feedback", "Media_Path"></pre>
+		</small>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Upload CVS</label>
+		<div class="col-sm-8">
+			<input type="file" class="form-control" name="group_name" id="group_name" ng-model="question.answer" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Paste Questions</label>
+		<div class="col-sm-8">
+			<textarea type="text" rows="6" class="form-control" name="group_name" id="group_name" ng-model="question.question" placeholder="Paste your questions in above mentioned format!" required></textarea>
+		</div>
+	</div>
+	
+	<ng-include ng-if="question.type=='multiplechoice'" src="'modules/tests/questions/questions/questiontypes/multiplechoice.html'"></ng-include>
+
+	<div class="form-group" >
+		<div class="col-sm-8 col-sm-offset-2">
+			<button class="btn btn-default btn-primary" ng-click="addToObject(testgroup, testgroups, 'levels', 'level_id')" ng-disabled="testGroupForm.$invalid">Add Group</button>
+			<button class="btn btn-default btn-danger" ng-click="showForm('level')">Cancel</button>
+		</div>
+	</div>
+</form>
