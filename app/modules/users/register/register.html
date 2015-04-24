@@ -3,8 +3,7 @@
 		<div class="col-sm-12">	
 			<div class="main-content">
 				<div class="breadcrumb-back" ng-include="'modules/component/toolbar.html'"></div>
-				<div ng-show="submitted" class="text-center"><h2>You have registered successfully! Check your mail for activation link.</h2>
-					<small>If activated <a href="#/login">Click here</a> to login!</small>
+				<div ng-show="submitted" class="text-center"><h2>You have registered successfully! <a href="#/login">Click here</a> to login!</small>
 				</div>
 				<form ng-hide="submitted" class="form-horizontal center-block" role="form" name="registerForm" ng-submit="registerForm.$valid" novalidate="novalidate" >
 					<h3>Free Registration / Sign up</h3>

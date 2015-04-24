@@ -8,7 +8,7 @@ define(['app'], function (app) {
     // This is controller for this view
 	var testsController = function ($scope,$rootScope,$injector,dataService,$location, $cookieStore, $cookies,$routeParams) {
 		
-		$scope.alerts = [{type: "success", msg: "Record updated successfully!"}];
+		$scope.alerts = [{type: "success", msg: "Record inserted successfully!"}];
 		$scope.closeAlert = function(index) {
 			$scope.alerts.splice(index, 1);
 		};

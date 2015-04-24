@@ -1,76 +1,4 @@
-<h2 class="text-center">Unit Test</h2>
-<div class="row">
-	<div class="col-sm-4">
-		<h3>Timing</h3>
-		<h3 style="background-color:#F38612" >00.10.03</h3>
-	</div>
-	<div class="col-sm-8">
-		<div class="row">
-			<div class="col-sm-12"><b>Question 5/Question 10 </b><hr></div>
-			<div class="col-sm-12">
-				<div class="btn-toolbar" role="toolbar" aria-label="...">
-					<div class="active btn btn-default btn-group" role="group" aria-label="...">Q1</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q2</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q3</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q4</div>
-					<div class=" btn btn-default btn-group" role="group" aria-label="...">Q5</div>
-					<div class=" btn btn-default btn-group" role="group" aria-label="...">Q6</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q7</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q8</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q9</div>
-					<div class="btn btn-default btn-group" role="group" aria-label="...">Q10</div>
-				</div>
-			</div>
-			<div class="col-sm-12">
-				<table class="table">	
-					<tr>
-						<td>1.</td>
-						<td>A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train?</td>
-						</tr>
-						<tr>
-						<td></td>
-						<td><div class="radio">
-							<label>A.</label>
-							  <label>
-								<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-								120 metres
-							  </label>
-							</div>
-							<div class="radio">
-							<label>B.</label>
-							  <label>
-								<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-								180 metres
-							  </label>
-							</div>
-							<div class="radio disabled">
-							<label>C.</label>
-							  <label>
-								<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-								324 metres
-							  </label>
-							</div>
-							<div class="radio disabled">
-							<label>D.</label>
-							  <label>
-								<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-								150 metres
-							  </label>
-							</div>
-						</td>
-					</tr>
-					<tr>
-					<td></td>
-					<td>
-						<button class="btn btn-default" type="submit">Next<span aria-hidden="true">&raquo;</span></button>
-					</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</div>
-
-<!-- <div class="table-responsive">
+<div class="table-responsive">
   <table class="table table-bordered table-striped">
   <thead>
       <th>sr.no</th>
@@ -81,18 +9,40 @@
 </thead>
       <tbody>
           <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
+			  <td>1</td>
+			  <td>Test1</td>
+			  <td>100</td>
+			  <td>solved</td>
+			  <td>
+				<div class="btn-group" role="group" aria-label="first group">
+					<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a>
+					<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+						<span class="glyphicon glyphicon-remove"></span>
+					</button> -->
+					<a href="#/dashboard/tests/testview" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+						View Test
+					</a>
+					<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
+						Start Test
+					</button>
+				</div>
+			</td>
+          </tr>
+          <tr>
+          <td>2</td>
+          <td>Test2</td>
+          <td>50</td>
           <td>solved</td>
           <td>
 					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							<span class="glyphicon glyphicon-remove"></span>
-						</button>
+						</button> -->
 						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							View Test
 						</button>
@@ -103,18 +53,18 @@
 				</td>
           </tr>
           <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
+          <td>3</td>
+          <td>Test3</td>
+          <td>40</td>
           <td>solved</td>
           <td>
 					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							<span class="glyphicon glyphicon-remove"></span>
-						</button>
+						</button> -->
 						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							View Test
 						</button>
@@ -125,18 +75,18 @@
 				</td>
           </tr>
           <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
+          <td>4</td>
+          <td>Test4</td>
+          <td>40</td>
           <td>solved</td>
           <td>
 					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							<span class="glyphicon glyphicon-remove"></span>
-						</button>
+						</button> -->
 						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							View Test
 						</button>
@@ -147,18 +97,18 @@
 				</td>
           </tr>
           <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
+          <td>5</td>
+          <td>Test5</td>
+          <td>20</td>
           <td>solved</td>
           <td>
 					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							<span class="glyphicon glyphicon-remove"></span>
-						</button>
+						</button> -->
 						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							View Test
 						</button>
@@ -169,18 +119,18 @@
 				</td>
           </tr>
           <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
+          <td>6</td>
+          <td>Test6</td>
+          <td>50</td>
           <td>solved</td>
           <td>
 					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							<span class="glyphicon glyphicon-remove"></span>
-						</button>
+						</button> -->
 						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							View Test
 						</button>
@@ -191,13 +141,13 @@
 				</td>
           </tr>
           <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
+          <td>7</td>
+          <td>Test7</td>
+          <td>50</td>
+          <td>unsolved</td>
           <td>
 					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
+						<!-- <a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
@@ -205,139 +155,7 @@
 						</button>
 						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							View Test
-						</button>
-						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							Start Test
-						</button>
-					</div>
-				</td>
-          </tr>
-          <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
-          <td>
-					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							View Test
-						</button>
-						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							Start Test
-						</button>
-					</div>
-				</td>
-          </tr>
-          <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
-          <td>
-					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							View Test
-						</button>
-						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							Start Test
-						</button>
-					</div>
-				</td>
-          </tr>
-          <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
-          <td>
-					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							View Test
-						</button>
-						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							Start Test
-						</button>
-					</div>
-				</td>
-          </tr>
-          <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
-          <td>
-					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							View Test
-						</button>
-						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							Start Test
-						</button>
-					</div>
-				</td>
-          </tr>
-          <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
-          <td>
-					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							View Test
-						</button>
-						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							Start Test
-						</button>
-					</div>
-				</td>
-          </tr>
-          <tr>
-          <td>1</td>
-          <td>addition</td>
-          <td>100</td>
-          <td>solved</td>
-          <td>
-					<div class="btn-group" role="group" aria-label="first group">
-						<a href="#/dashboard/users/createusergroup/1" class="btn btn-info" tooltip="Edit">
-							<span class="glyphicon glyphicon-pencil"></span>
-						</a>
-						<button type="button" class="btn btn-danger ng-pristine ng-valid active" tooltip="Remove Group" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button type="button" class="btn btn-primary ng-pristine ng-valid active" tooltip="View Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
-							View Test
-						</button>
+						</button> -->
 						<button type="button" class="btn btn-success ng-pristine ng-valid active" tooltip="Start Test" ng-model="groups.status" ng-change="changeStatusFn('status', groups.status, groups.id)" btn-checkbox="" btn-checkbox-true="'1'" btn-checkbox-false="'0'">
 							Start Test
 						</button>
@@ -367,5 +185,5 @@
 				</td>
           </tr>
       </tbody>
-</table> -->
+</table> 
 </div>

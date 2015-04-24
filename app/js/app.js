@@ -73,7 +73,7 @@ define(['angular',
 				
 				.when('/dashboard/tests', route.resolve({controller:'tests', template: 'tests',label:"Tests"}, 'tests/'))
 				
-				.when('/dashboard/tests/:views?', route.resolve({controller:'tests', template: 'tests',label:"My Tests"}, 'tests/'))
+				.when('/dashboard/tests/:views?/:testid?', route.resolve({controller:'tests', template: 'tests',label:"My Tests"}, 'tests/'))
 				
 				.when('/dashboard/assignments', route.resolve({controller:'assignments', template: 'assignments',label:"My Assignments"}, 'assignments/'))
 				
