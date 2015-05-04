@@ -3,10 +3,10 @@
 
 
 define(['app'], function (app) {
-    var injectParams = ['$scope','$rootScope', '$injector','dataService','$location', '$cookieStore', '$cookies', '$routeParams'];
+    var injectParams = ['$scope','$rootScope', '$injector','dataService','$location', '$cookieStore', '$cookies', '$routeParams','modalService'];
 
     // This is controller for this view
-	var testsController = function ($scope,$rootScope,$injector,dataService,$location, $cookieStore, $cookies,$routeParams) {
+	var testsController = function ($scope,$rootScope,$injector,dataService,$location, $cookieStore, $cookies,$routeParams,modalService) {
 		
 		$scope.alerts = [{type: "success", msg: "Record inserted successfully!"}];
 		$scope.closeAlert = function(index) {
@@ -69,6 +69,29 @@ define(['app'], function (app) {
 			$scope.formPart = 'createtest';
 			
 		}
+		
+		//modal
+		$scope.ok = function () {
+			$modalInstance.close();
+		};
+
+		$scope.cancel = function () {
+			$modalInstance.dismiss('cancel');
+		};
+		$scope.open= function (url) {
+			var modalDefaults = {
+					templateUrl: url,	
+					size : 'sm'
+			};
+			
+			modalService.showModal(modalDefaults).then(function (result) {
+				console.log("modal opened")	
+				$scope.ok = function(){
+					$modalOption.close("ok");
+				}
+			});
+		};
+		//endmodal
 		
 		switch($scope.testViews) {
 			case 'questions':
