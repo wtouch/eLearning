@@ -157,3 +157,7 @@ color:blue}
 {
 	width:100px;
 } 
+.btn-toolbar>.btn, .btn-toolbar>.btn-group, .btn-toolbar>.input-group {
+
+  margin-bottom: 5px;
+}
