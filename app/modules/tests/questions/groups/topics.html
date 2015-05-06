@@ -50,6 +50,11 @@
 			<option value="">Select Subject</option>
 		</select>
 	</div>
+	<div class="col-sm-3 bottomspace">
+		<select class="form-control" ng-model="topicFltr" ng-options="subject.subject_id as subject.topic_name for subject in testConfig.topics | filter : {level_id : levelFltr}">
+			<option value="">Select Topic</option>
+		</select>
+	</div>
 	<div class="col-sm-12">
 		<table class="table table-bordered table-responsive ">
 			<tr>

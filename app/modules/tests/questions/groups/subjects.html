@@ -32,6 +32,11 @@
 </form>
 <div class="row">
 	<div class="col-sm-3 bottomspace">
+		<select class="form-control" ng-model="subjects.level_id" ng-options="level.level_id as level.level_name for level in testConfig.levels">
+			<option value="">Select Level</option>
+		</select>
+	</div>
+	<div class="col-sm-3 bottomspace">
 		<select class="form-control" ng-model="levelFltr" ng-options="level.level_id as level.subject_name for level in testConfig.subjects">
 			<option value="">Select Subject</option>
 		</select>

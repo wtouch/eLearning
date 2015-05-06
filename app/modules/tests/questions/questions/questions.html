@@ -1,27 +1,27 @@
 <h2>List of Questions</h2>
 <div class="row">
-	<div class="col-sm-3">
+	<div class="col-sm-4">
 		<div class="form-group">
 			<select class="form-control" ng-model="question.level" ng-options="level.level_id as level.level_name for level in testConfig.levels" required>
 				<option value="">Select Level</option>
 			</select>		
 		</div>
 	</div>
-	<div class="col-sm-3">
+	<div class="col-sm-4">
 		<div class="form-group">
 			<select class="form-control" ng-model="question.subject" ng-options="subject.subject_id as subject.subject_name for subject in testConfig.subjects | filter : {level_id : topics.level_id}" required>
 				<option value="">Select Subject</option>
 			</select>	
 		</div>
 	</div>
-	<div class="col-sm-3">
+	<!-- <div class="col-sm-3">
 		<div class="form-group">
 			<select class="form-control" ng-model="question.topic" ng-options="topic.topic_id as topic.topic_name for topic in testConfig.topics | filter : {level_id : topics.subject_id, level_id : topics.level_id}" required>
 				<option value="">Select Topic</option>
 			</select>	
 		</div>
-	</div>	
-	<div class="col-sm-3">
+	</div> -->	
+	<div class="col-sm-4">
 		<div class="form-group">
 			<select class="form-control" ng-model="question.type" ng-options="type.id as type.type_name for type in testConfig.question_type" required>
 				<option value="">Select Question Type</option>
@@ -43,11 +43,11 @@
 				<tbody>
 					<tr>
 						<td>1</td>
-						<td>What is long form of WWW?</td>
+						<td>A body of mass 4Kg when a force of 200N acts on it produces an acceleration of</td>
 						<td>MCQ</td>
-						<td>1st Standard</td>
-						<td>Computer</td>
-						<td>World Wide Web</td>
+						<td>8th Standard</td>
+						<td>Science</td>
+						<td>50 m/sec2</td>
 						<td>
 							<a type="button" tooltip="Edit Question" class="btn btn-success ">
 								<span class="glyphicon glyphicon-pencil"></span>
@@ -59,11 +59,11 @@
 					</tr>
 					<tr>
 						<td>2</td>
-						<td>Who is the father of the Internet?</td>
+						<td>Which of the following is made use of to open the tightened lid of a bottle?</td>
 						<td>MCQ</td>
-						<td>4th Standard</td>
-						<td>English</td>
-						<td>Vint Cerf</td>
+						<td>8th Standard</td>
+						<td>Science</td>
+						<td>Thermal expansion</td>
 						<td>
 							<a type="button" tooltip="Edit Question" class="btn btn-success ">
 								<span class="glyphicon glyphicon-pencil"></span>
@@ -75,11 +75,11 @@
 					</tr>
 					<tr>
 						<td>3</td>
-						<td>Who is the father of the Internet?</td>
+						<td>Which one of the following is seldom responsible for cracking of rocks?</td>
 						<td>MCQ</td>
-						<td>4th Standard</td>
-						<td>English</td>
-						<td>Vint Cerf</td>
+						<td>8th Standard</td>
+						<td>Science</td>
+						<td>Hydrogen bond</td>
 						<td>
 							<a type="button" tooltip="Edit Question" class="btn btn-success ">
 								<span class="glyphicon glyphicon-pencil"></span>
@@ -91,11 +91,11 @@
 					</tr>
 					<tr>
 						<td>4</td>
-						<td>Who is the father of the Internet?</td>
+						<td>Objects thrown vertically upwards move for a certain distance and then falls back due to</td>
 						<td>MCQ</td>
-						<td>4th Standard</td>
-						<td>English</td>
-						<td>Vint Cerf</td>
+						<td>8th Standard</td>
+						<td>Science</td>
+						<td>Gravitational Force</td>
 						<td>
 							<a type="button" tooltip="Edit Question" class="btn btn-success ">
 								<span class="glyphicon glyphicon-pencil"></span>
@@ -107,11 +107,11 @@
 					</tr>
 					<tr>
 						<td>5</td>
-						<td>Who is the father of the Internet?</td>
+						<td>Momentum of a body depends upon its</td>
 						<td>MCQ</td>
-						<td>4th Standard</td>
-						<td>English</td>
-						<td>Vint Cerf</td>
+						<td>8th Standard</td>
+						<td>Science</td>
+						<td>Mass and time</td>
 						<td>
 							<a type="button" tooltip="Edit Question" class="btn btn-success ">
 								<span class="glyphicon glyphicon-pencil"></span>
@@ -120,7 +120,7 @@
 								<span class="glyphicon glyphicon-trash"></span>
 							</a>
 						</td>
-					</tr>
+					</tr> 
 				</tbody>
 			</table>
 		</div>
